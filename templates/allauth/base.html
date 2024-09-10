@@ -46,7 +46,30 @@
 
 
 <body>
-    <header class="container-fluid"></header>
+    <header class="container-fluid">
+        <div id="topnav" class="row d-none d-lg-flex"></div>
+            <!-- Search -->
+            <div class="col-12 col-lg-4 my-auto text-lg-start">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control search-bar" type="text" name="q" placeholder="Search our site" aria-label="Search bar">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black" type="submit" aria-label="Submit search">
+                                <span class="icon" aria-hidden="true">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+                        <!-- Logo -->
+                        <div class="col-12 col-lg-4 my-auto text-lg-center">
+                            <a href="{% url 'home' %}" class="nav-link">
+                                <img src="{{ MEDIA_URL }}homenestlogo.png" alt="HomeNest Logo" class="logo">
+                            </a>
+                        </div>
+    </header>
 
       <!-- Messages -->
     {% if messages %}
