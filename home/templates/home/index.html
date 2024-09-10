@@ -2,3 +2,14 @@
 {% load static %}
 
 {% block content %}
+<!-- Home hero section with welcome message -->
+<div class="p-5 mb-4 home-background">
+    <div class="container-fluid py-5">
+        <div class="home-text-background container col-md-8">
+            <h1 class="display-5 fw-bold text-uppercase home-background-text-shadow">Welcome!</h1>
+            <p class="fs-4 home-background-text-shadow">Looking to spice up your home? Perhaps a new kettle for
+                the kitchen, or a towel set for the bathroom? We have everything you need right here!</p>
+            <a href="{% url 'products' %}" class="btn btn-primary btn-lg text-uppercase mt-1">Shop Now</a>
+        </div>
+    </div>
+</div>
