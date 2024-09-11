@@ -1,2 +1,10 @@
 <!-- Top header on small and medium devices -->
 <div class="list-inline-item d-lg-none">
+        <!-- Logo -->
+        <a href="{% url 'home' %}">
+            <img src="{{ MEDIA_URL }}homenestlogo.png" alt="HomeNest Logo" id="logo-small">
+        </a>
+    </div>
+    <ul class="d-block d-lg-none me-2" id="mobile-top-header">
+        <li class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex">
