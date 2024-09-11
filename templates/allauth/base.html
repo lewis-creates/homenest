@@ -69,6 +69,47 @@
                                 <img src="{{ MEDIA_URL }}homenestlogo.png" alt="HomeNest Logo" class="logo">
                             </a>
                         </div>
+                                    <!-- My account and shopping bag -->
+            <div class="col-12 col-lg-4 my-auto">
+                <ul class="list-inline text-center text-lg-end my-0">
+                    <li class="nav-item list-inline-item dropdown pt-3">
+                        <a class="nav-link" href="#" id="user-desktop-options" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="text-center my-auto">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p>My Account</p>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="user-desktop-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Add New Product</a></li>
+                            {% endif %}
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="{% url 'view_bag' %}" class="nav-link">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p>
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
       <!-- Messages -->
