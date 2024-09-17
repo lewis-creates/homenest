@@ -18,5 +18,26 @@
       {% endfor %}
     </div>
   </div>
+  <!-- Product list -->
+  <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
+    {% for product in products %}
+    <div class="col">
+      <div class="product-card d-flex flex-column h-100">
+        <div class="card h-100 border-0">
+          <a href="">
+            {% if product.image %}
+            <!-- Product image -->
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            {% else %}
+            <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ product.name }}">
+            {% endif %}
+            <div class="card-body product-padding">
+              <!-- Product name -->
+              <p class="card-title heading-5">{{ product.name }}</p>
+              <!-- Product price -->
+              <p class="card-text"><strong>£{{ product.price }}</strong></p>
+            </div>
+          </a>
+          {% endfor %}
 
   {% endblock %}
