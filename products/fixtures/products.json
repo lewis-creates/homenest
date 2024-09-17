@@ -1,0 +1,938 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "name": "Red Casserole Dish",
+        "description": "Say goodbye to difficult cooking with this fantastic red casserole dish! Great results everytime.",
+        "price": 69.99,
+        "category": 1,
+        "rating": 4.7,
+        "image_url": "https://images.freeimages.com/images/large-previews/84a/casserole-1421552.jpg",
+        "image": "casserole-1421552.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "name": "Shark Tall Frying Pan",
+        "description": "A frying pan with a twist. The tall edges reduce oil splatter and allow for easier control when cooking.",
+        "price": 49.99,
+        "category": 1,
+        "rating": 4.4,
+        "image_url": "https://images.pexels.com/photos/4252145/pexels-photo-4252145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-cottonbro-4252145.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "name": "Vintage Lapel Set",
+        "description": "Spice up the kitchen with this unique, vintage lapel set for all your cooking needs.",
+        "price": 29.99,
+        "category": 1,
+        "rating": 4.9,
+        "image_url": "https://images.unsplash.com/photo-1501924497965-792fefaea3dc?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "caroline-attwood-m3jty6eobzm-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "name": "Rustic Large Mixing Bowl",
+        "description": "Mix away with this large rustic bowl, sure to keep every ounce of sweet goodness within!",
+        "price": 39.95,
+        "category": 1,
+        "rating": 4.2,
+        "image_url": "https://images.unsplash.com/photo-1614778168817-d8a55d646890?q=80&w=2450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "toa-heftiba-9c-r0r7cg3e-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "name": "Small Beige Cooking Pan",
+        "description": "This petite pan may be small, but is packed with durability and is ready to cook whatever you need!",
+        "price": 55.95,
+        "category": 1,
+        "rating": 3.8,
+        "image_url": "https://images.unsplash.com/photo-1518737003272-dac7c4760d5e?q=80&w=2488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "gaelle-marcel-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "name": "Multicoloured Cooking Wisk",
+        "description": "Wisk away! Not on holiday, but in the kitchen. Keep the kids entertained during bake time and brighten up your baking experience.",
+        "price": 9.79,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "https://images.unsplash.com/photo-1553558603-707b3cd37f57?q=80&w=2446&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "isabella-fischer-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "name": "Grey Rustic Kettle",
+        "description": "A grey kettle, but not just for ‘Early Grey’ tea!",
+        "price": 32.99,
+        "category": 2,
+        "rating": 3.8,
+        "image_url": "https://images.unsplash.com/photo-1594213114663-d94db9b17125?q=80&w=2369&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "laura-adai-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "name": "Lime Green Kettle",
+        "description": "Who wouldn’t want a bit of lime green in their kitchen? You’ll get the best cup of tea ever with this fantastic new kettle.",
+        "price": 87.99,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "https://images.unsplash.com/photo-1581348304131-9d03407316b7?q=80&w=2497&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "edward-howell-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "name": "Black Cork Kettle",
+        "description": "Something different for the kitchen perhaps? Made using recycled cork for the best cup of tea or coffee going.",
+        "price": 99.95,
+        "category": 2,
+        "rating": 3.2,
+        "image_url": "https://images.unsplash.com/photo-1594409060643-5643ef18a236?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "andrew-valdivia-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "name": "Beige Round Top Kettle",
+        "description": "An easy handle for an easy cuppa. Make your life easy every morning with this special edition kettle.",
+        "price": 75.9,
+        "category": 2,
+        "rating": 4.1,
+        "image_url": "https://images.unsplash.com/photo-1603437077199-463272de17c6?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "yue-su-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "name": "Polished Grey Kettle",
+        "description": "Add this beautiful piece to your kitchen, to match your other polished utensils and cookware.",
+        "price": 39.99,
+        "category": 2,
+        "rating": 2.2,
+        "image_url": "https://images.unsplash.com/photo-1598892294037-0f629bbcefb9?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "dessy-dimcheva-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "name": "Maroon Polished Kettle",
+        "description": "Heat this whistle kettle up the old fashioned way, with no electric. Enjoy your cup of tea or coffee in style!",
+        "price": 109.99,
+        "category": 2,
+        "rating": 3.4,
+        "image_url": "https://images.unsplash.com/photo-1458060390477-1b8bc1cfe017?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "milada-vigerova-unsplash.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "name": "Stainless Steel Cutlery Set",
+        "description": "A high-quality stainless steel cutlery set, perfect for any table setting.",
+        "price": 12.99,
+        "category": 3,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/2291591/pexels-photo-2291591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-naimbic-2291591.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "name": "Wooden Cutlery Set",
+        "description": "Something different for dinner time, or just purchase this lovely set for show in your home!",
+        "price": 7.99,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/2147637/pexels-photo-2147637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karine-monteiro-1132429-2147637.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe Cooking Knife",
+        "description": "A luxurious cooking knife for all your chopping needs. Extra sharp blade for additional precision.",
+        "price": 24.75,
+        "category": 3,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/4226864/pexels-photo-4226864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4226864.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "name": "Black Teaspoons (Pair)",
+        "description": "A pair of unique, black teaspoons for something a bit different!",
+        "price": 12.99,
+        "category": 3,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/4226794/pexels-photo-4226794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4226794.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "name": "Wooden Disposable Cutlery Set",
+        "description": "A disposable wooden cutlery set for parties or any occasion where you don’t fancy doing the washing up.",
+        "price": 11,
+        "category": 3,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/4857600/pexels-photo-4857600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-vie-studio-4857600.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "name": "Budget Bulk Cutlery Set",
+        "description": "Looking for a batch of cutlery, including forks, spoons and knives at a budget price? This is the set for you!",
+        "price": 15.75,
+        "category": 3,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/13585783/pexels-photo-13585783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-pealdesign-13585783.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe Kitchen Chair Set",
+        "description": "Four luxe kitchen chairs are included in this fantastic set, to go with your other luxe kitchen items!",
+        "price": 249.99,
+        "category": 4,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/6492401/pexels-photo-6492401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6492401.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "name": "Wooden Basic Chair Set",
+        "description": "For the smaller table in your kitchen or adjoining room. Three wooden chairs are included in this price.",
+        "price": 179.99,
+        "category": 4,
+        "rating": 3.8,
+        "image_url": "https://images.pexels.com/photos/6492401/pexels-photo-6492401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-pixabay-259819.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "name": "Brown Chair Set (Pair)",
+        "description": "This suede brown chair set is sure to add some color to your white kitchen as shown.",
+        "price": 98.75,
+        "category": 4,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/6301168/pexels-photo-6301168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6301168.jpg"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "name": "Royal Blue Tall Chair Set",
+        "description": "A pair of royal blue suede tall chairs, perfect for a cup of coffee in the morning (or tea if that’s your thing)!",
+        "price": 165.99,
+        "category": 4,
+        "rating": 3.4,
+        "image_url": "https://images.pexels.com/photos/6636287/pexels-photo-6636287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6636287.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "name": "Dark Brown Wooden Tall Chair",
+        "description": "Add some legs to your rustic kitchen with this rustic wooden tall chair.",
+        "price": 87.99,
+        "category": 4,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/4049873/pexels-photo-4049873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-ekaterina-bolovtsova-4049873.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "name": "Grey Kitchen Chair Set",
+        "description": "Three chairs are included in this price as shown, designed for a high kitchen table or bar.",
+        "price": 239.95,
+        "category": 4,
+        "rating": 3.7,
+        "image_url": "https://images.pexels.com/photos/6198663/pexels-photo-6198663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6198663.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "name": "38 Inch Flat Screen Television",
+        "description": "With a retina display this will be sure to bring years of entertainment to you and your family!",
+        "price": 499.95,
+        "category": 5,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-fotoaibe-1571458.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "name": "50 Inch Flat Screen Luxe Television",
+        "description": "This 50 inch flat screen can be wall mounted and features all of the modern features you and your family will need.",
+        "price": 349.99,
+        "category": 5,
+        "rating": 4.3,
+        "image_url": "https://images.pexels.com/photos/6186813/pexels-photo-6186813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6186813.jpg"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+        "name": "39 Inch Basic Flat Screen Television",
+        "description": "Looking for a luxe-looking television on a budget. Consider this product for your home!",
+        "price": 185.79,
+        "category": 5,
+        "rating": 3.1,
+        "image_url": "https://images.pexels.com/photos/6316063/pexels-photo-6316063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6316063.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+        "name": "29 Inch Ultra-Thin Television",
+        "description": "An ultra-thin television for those looking for an extra slim look in their living room. 30 day free Netflix subscription included",
+        "price": 309.99,
+        "category": 5,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/6782360/pexels-photo-6782360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6782360.jpg"
+      }
+    },
+    {
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+        "name": "45 Inch Flat Screen With Sound System",
+        "description": "This special product includes a sound system specially designed for the television. The price includes everything shown in the picture, so you’ll be ready to watch movies in no time!",
+        "price": 879.95,
+        "category": 5,
+        "rating": 4.1,
+        "image_url": "https://images.pexels.com/photos/6487969/pexels-photo-6487969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6487969.jpg"
+      }
+    },
+    {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "name": "43 Inch Flat Screen Television",
+        "description": "This brand new television is ready to be wall mounted in your home in no time. Amazon Prime and Netflix 30 day free trials included in the price you pay!",
+        "price": 485.95,
+        "category": 5,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/6316067/pexels-photo-6316067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6316067.jpg"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "name": "Dark Grey Luxe Dinning Table",
+        "description": "Enough to fit four chairs, this luce table is designed to go with your luxe dinning setting.",
+        "price": 387.99,
+        "category": 6,
+        "rating": 4.3,
+        "image_url": "https://images.pexels.com/photos/3356416/pexels-photo-3356416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-houzlook-3356416.jpg"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "name": "Black Small Dining Table",
+        "description": "A black small dining table, perfect for small meals with a max of four people.",
+        "price": 187.95,
+        "category": 6,
+        "rating": 3.7,
+        "image_url": "https://images.pexels.com/photos/932095/pexels-photo-932095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-wdnet-932095.jpg"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "name": "Small Round Wooden Table",
+        "description": "This table can be used to serve dinner, hold your fruit bowl or just add a small seating area in your living room.",
+        "price": 275.95,
+        "category": 6,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+        "image": "pexels-fotoaibe-1571463.jpg"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "name": "Dark Brown Large Dining Table",
+        "description": "Begin or end your day with the family around this beautiful dining table, large enough to fit a minimum of four people for breakfast or dinner!",
+        "price": 765.95,
+        "category": 6,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/3935311/pexels-photo-3935311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-curtis-adams-1694007-3935311.jpg"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "name": "Light Small Table",
+        "description": "This small light table isn’t quite big enough to host an entire family, but it’s certainly big enough to hold a few people in the morning for a cup of tea or coffee.",
+        "price": 289.95,
+        "category": 6,
+        "rating": 3.6,
+        "image_url": "https://images.pexels.com/photos/7236955/pexels-photo-7236955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-thirdman-7236955.jpg"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+        "name": "Grey Ceramic Luxe Table",
+        "description": "This special table gives the impression of a beautiful kitchen counter top, without having to pay the expense of one!",
+        "price": 429.99,
+        "category": 6,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/6970054/pexels-photo-6970054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6970054.jpg"
+      }
+    },
+    {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+        "name": "White Budget Betsheet Set",
+        "description": "Ths budget bedsheet set includes a quilt cover, bedsheet and two pillow covers, all for a very affordable price.",
+        "price": 9.99,
+        "category": 7,
+        "rating": 3.8,
+        "image_url": "https://images.pexels.com/photos/6412473/pexels-photo-6412473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-anntarazevich-6412473.jpg"
+      }
+    },
+    {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+        "name": "White/Sage Luxe Quilt",
+        "description": "You will sleep like a baby in this luxe white and sage quilt. Perfect for the summer and winter.",
+        "price": 19.95,
+        "category": 7,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-naimbic-2029698.jpg"
+      }
+    },
+    {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe White Bedsheets and Bed Runner",
+        "description": "This luxe white bedsheet set includes a quilt cover, bedsheet, 2 white pillow covers, 2 taupe pillow covers plus a beige bedrunner.",
+        "price": 49.95,
+        "category": 7,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/6186819/pexels-photo-6186819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6186819.jpg"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "name": "Rose Pink Bedsheet",
+        "description": "This rose pink bed sheet is perfect for anyone who likes a bit of pink in their lifes. Sleep well knowing your bedsheet matches the rest of your pink furniture!",
+        "price": 12.99,
+        "category": 7,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/19652029/pexels-photo-19652029/free-photo-of-close-up-of-a-pink-sheet.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-lorete-m-511517246-19652029.jpg"
+      }
+    },
+    {
+      "pk": 41,
+      "model": "products.product",
+      "fields": {
+        "name": "Silver Grey Bedsheet",
+        "description": "This silver grey bedsheet will give you an incredible nights sleep. Rest comfortably knowing this exquisite sheet is made with care using pure cotton.",
+        "price": 35.99,
+        "category": 7,
+        "rating": 4.2,
+        "image_url": "https://images.pexels.com/photos/12095748/pexels-photo-12095748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-la-photography-212558539-12095748.jpg"
+      }
+    },
+    {
+      "pk": 42,
+      "model": "products.product",
+      "fields": {
+        "name": "Light Grey Cotton Bedsheet",
+        "description": "Get the best nights sleep EVER with this incredible light grey cotton bedsheet.",
+        "price": 24.95,
+        "category": 7,
+        "rating": 3.8,
+        "image_url": "https://images.pexels.com/photos/12597150/pexels-photo-12597150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-marieta-christopoulou-116281045-12597150.jpg"
+      }
+    },
+    {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe White Wooden Wardrobe",
+        "description": "This luxe white wardrobe is to hold enough for two! With several compartments for all of your clothing and shoes, there is plenty of room for all of your belongings.",
+        "price": 1299.95,
+        "category": 8,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/6956852/pexels-photo-6956852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6956852.jpg"
+      }
+    },
+    {
+      "pk": 44,
+      "model": "products.product",
+      "fields": {
+        "name": "Petrol Budget Wardrobe",
+        "description": "This budget wardrobe is enough to fit several outfits for one person, or two if you’re smart!",
+        "price": 299.99,
+        "category": 8,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/6585605/pexels-photo-6585605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6585605.jpg"
+      }
+    },
+    {
+      "pk": 45,
+      "model": "products.product",
+      "fields": {
+        "name": "Wooden Luxe Open Wardrobe",
+        "description": "This open wardrobe provides quick, easy access to all of your clothing! With separate compartments for all of your belongings, you’ll be on the move in no time.",
+        "price": 985.99,
+        "category": 8,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/7061419/pexels-photo-7061419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-7061419.jpg"
+      }
+    },
+    {
+      "pk": 46,
+      "model": "products.product",
+      "fields": {
+        "name": "White Self Standing Wardrobe",
+        "description": "This white self standing wardrobe is perfect for any couple looking for a little extra space to store their clothing.",
+        "price": 349.99,
+        "category": 8,
+        "rating": 4.1,
+        "image_url": "https://images.pexels.com/photos/7166634/pexels-photo-7166634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-7166634.jpg"
+      }
+    },
+    {
+      "pk": 47,
+      "model": "products.product",
+      "fields": {
+        "name": "White Three Panel Wardrobe",
+        "description": "This wardrobe is perfect to slot into that extra bit of space you have in your bedroom. Several compartments are available to store everything you need.",
+        "price": 239.99,
+        "category": 8,
+        "rating": 3.7,
+        "image_url": "https://images.pexels.com/photos/16535605/pexels-photo-16535605/free-photo-of-a-white-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-almira-262757642-16535605.jpg"
+      }
+    },
+    {
+      "pk": 48,
+      "model": "products.product",
+      "fields": {
+        "name": "White Tall Wardrobe",
+        "description": "This tall wardrobe is handy to store dresses and any other tall garments, as well as your everyday essentials!",
+        "price": 485.99,
+        "category": 8,
+        "rating": 3.9,
+        "image_url": "https://images.pexels.com/photos/19857266/pexels-photo-19857266/free-photo-of-white-walls-in-corridor-in-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-lisa-anna-901356985-19857266.jpg"
+      }
+    },
+    {
+      "pk": 49,
+      "model": "products.product",
+      "fields": {
+        "name": "Red Accessory Pillow",
+        "description": "This accessory pillow is perfect for display on your bed, on top of your regular bedtime pillows. Cushion inside also included.",
+        "price": 18.95,
+        "category": 9,
+        "rating": 4.2,
+        "image_url": "https://images.pexels.com/photos/776120/pexels-photo-776120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-atomlaborblog-776120.jpg"
+      }
+    },
+    {
+      "pk": 50,
+      "model": "products.product",
+      "fields": {
+        "name": "White Budget Pillow Set",
+        "description": "This pillow set includes both the cover plus the actual cushion inside.",
+        "price": 26.95,
+        "category": 9,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/3682240/pexels-photo-3682240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-castorlystock-3682240.jpg"
+      }
+    },
+    {
+      "pk": 51,
+      "model": "products.product",
+      "fields": {
+        "name": "Picture Pillow Set",
+        "description": "Four pillows are included in this set as shown, all with a collage of pictures for a little adventure before bedtime!",
+        "price": 54.99,
+        "category": 9,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-jvdm-1454806.jpg"
+      }
+    },
+    {
+      "pk": 52,
+      "model": "products.product",
+      "fields": {
+        "name": "Small White Pillow Set",
+        "description": "All pillows shown are included in this pillow set. Please note, only the covers are included, not the pillows themselves.",
+        "price": 39.95,
+        "category": 9,
+        "rating": 3.5,
+        "image_url": "https://images.pexels.com/photos/6603474/pexels-photo-6603474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-anna-nekrashevich-6603474.jpg"
+      }
+    },
+    {
+      "pk": 53,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe Peach Pillow Set",
+        "description": "This pillow set includes 4 white pillows, plus one peach feature cushion for give your bedroom a colorful lift.",
+        "price": 79.95,
+        "category": 9,
+        "rating": 4.4,
+        "image_url": "https://images.pexels.com/photos/22469108/pexels-photo-22469108/free-photo-of-book-croissant-and-beverage-on-bed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-polina-semernina-497042591-22469108.jpg"
+      }
+    },
+    {
+      "pk": 54,
+      "model": "products.product",
+      "fields": {
+        "name": "Sage Green Pillow Set",
+        "description": "This set includes 4 white pillows plus 2 sage green feature cushions. Consider this set for your next set of bedding!",
+        "price": 84.95,
+        "category": 9,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/15743375/pexels-photo-15743375/free-photo-of-lamps-and-painting-over-bed-with-pillows.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-ushindinamegabe-15743375.jpg"
+      }
+    },
+    {
+      "pk": 55,
+      "model": "products.product",
+      "fields": {
+        "name": "White Luxe Towel Set",
+        "description": "Two towels are included in this lux towel set, one with grey piping and the other with black.",
+        "price": 13.99,
+        "category": 10,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/12679/pexels-photo-12679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-kingofcotton-12679.jpg"
+      }
+    },
+    {
+      "pk": 56,
+      "model": "products.product",
+      "fields": {
+        "name": "Budget Towel Set",
+        "description": "This budget set includes 4 assorted towels at an affordable price. Consider this purchase for a long lasting set of towels at a bargain price!",
+        "price": 9.85,
+        "category": 10,
+        "rating": 3.9,
+        "image_url": "https://images.pexels.com/photos/7691101/pexels-photo-7691101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-roman-odintsov-7691101.jpg"
+      }
+    },
+    {
+      "pk": 57,
+      "model": "products.product",
+      "fields": {
+        "name": "White Cotton Towel Set",
+        "description": "This set includes two bath/shower towels, plus a hand towel, all in the same matching fabric.",
+        "price": 19.85,
+        "category": 10,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/7691105/pexels-photo-7691105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-roman-odintsov-7691105.jpg"
+      }
+    },
+    {
+      "pk": 58,
+      "model": "products.product",
+      "fields": {
+        "name": "Beige Towel Set",
+        "description": "This beige towel set includes two small and one large bath towels. Extra thick for those cold winter nights where you need a little something extra after a bath or shower.",
+        "price": 25.95,
+        "category": 10,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/4210376/pexels-photo-4210376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4210376.jpg"
+      }
+    },
+    {
+      "pk": 59,
+      "model": "products.product",
+      "fields": {
+        "name": "Grey & Purple Towel Set",
+        "description": "This towel set includes two purple and one grey towels. Perfect after a long soak in the tub or a quick shower.",
+        "price": 15.99,
+        "category": 10,
+        "rating": 3.8,
+        "image_url": "https://images.pexels.com/photos/45980/pexels-photo-45980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-dom-j-7304-45980.jpg"
+      }
+    },
+    {
+      "pk": 60,
+      "model": "products.product",
+      "fields": {
+        "name": "Pink Luxe Towel",
+        "description": "This towel is perfect to spice up your bathroom decor or for a trip to the beach!",
+        "price": 8.95,
+        "category": 10,
+        "rating": 2.8,
+        "image_url": "https://images.pexels.com/photos/8054105/pexels-photo-8054105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-kseniachernaya-8054105.jpg"
+      }
+    },
+    {
+      "pk": 61,
+      "model": "products.product",
+      "fields": {
+        "name": "Elegant Wall Mirror",
+        "description": "A sleek and stylish wall mirror that adds a touch of elegance to any room.",
+        "price": 79.99,
+        "category": 11,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/2203743/pexels-photo-2203743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-einfoto-2203743.jpg"
+      }
+    },
+    {
+      "pk": 62,
+      "model": "products.product",
+      "fields": {
+        "name": "Modern Decorative Mirror",
+        "description": "A contemporary decorative mirror that enhances the aesthetic of your space.",
+        "price": 89.99,
+        "category": 11,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/2207894/pexels-photo-2207894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-julieaagaard-2207894.jpg"
+      }
+    },
+    {
+      "pk": 63,
+      "model": "products.product",
+      "fields": {
+        "name": "Classic Oval Mirror",
+        "description": "A timeless oval mirror that fits perfectly in any home decor.",
+        "price": 74.99,
+        "category": 11,
+        "rating": 4.3,
+        "image_url": "https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-christa-grover-977018-1910472.jpg"
+      }
+    },
+    {
+      "pk": 64,
+      "model": "products.product",
+      "fields": {
+        "name": "Bathroom Vanity Mirror",
+        "description": "A practical and stylish mirror designed for bathroom vanities.",
+        "price": 69.99,
+        "category": 11,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/20314957/pexels-photo-20314957/free-photo-of-a-sink-and-a-mirror-in-a-bathroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-jugglegroup-20314957.jpg"
+      }
+    },
+    {
+      "pk": 65,
+      "model": "products.product",
+      "fields": {
+        "name": "Ornate Wall Mirror",
+        "description": "An ornate wall mirror that brings a touch of sophistication to your home.",
+        "price": 99.99,
+        "category": 11,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/3315291/pexels-photo-3315291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-vika-glitter-392079-3315291.jpg"
+      }
+    },
+    {
+      "pk": 66,
+      "model": "products.product",
+      "fields": {
+        "name": "Minimalist Wall Mirror",
+        "description": "A minimalist wall mirror that complements any modern interior design.",
+        "price": 59.99,
+        "category": 11,
+        "rating": 4.4,
+        "image_url": "https://images.pexels.com/photos/6538940/pexels-photo-6538940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-heyho-6538940.jpg"
+      }
+    },
+    {
+      "pk": 67,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxurious Soap Dispenser",
+        "description": "Elegant soap dispenser with a sleek silver pump, perfect for adding a touch of sophistication to any bathroom.",
+        "price": 19.99,
+        "category": 12,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/4239014/pexels-photo-4239014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4239014.jpg"
+      }
+    },
+    {
+      "pk": 68,
+      "model": "products.product",
+      "fields": {
+        "name": "Ceramic Bathroom Set",
+        "description": "Stylish ceramic bathroom accessory set including a two soaps, toothbrush holder, and tumbler, featuring a modern white finish.",
+        "price": 39.99,
+        "category": 12,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/4202924/pexels-photo-4202924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4202924.jpg"
+      }
+    },
+    {
+      "pk": 69,
+      "model": "products.product",
+      "fields": {
+        "name": "Vintage Bathroom Shower Set",
+        "description": "Vintage-style bathroom shower set including three soap dispensers, toothbrush holder, and tray. Perfect for adding a classic touch to your bathroom decor.",
+        "price": 59.99,
+        "category": 12,
+        "rating": 4.7,
+        "image_url": "https://images.pexels.com/photos/8159664/pexels-photo-8159664.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-ron-lach-8159664.jpg"
+      }
+    },
+    {
+      "pk": 70,
+      "model": "products.product",
+      "fields": {
+        "name": "Natural Bamboo Bath Caddy",
+        "description": "Eco-friendly bamboo bath caddy bringing relaxation to your bath time.",
+        "price": 9.99,
+        "category": 12,
+        "rating": 4.9,
+        "image_url": "https://images.pexels.com/photos/4672479/pexels-photo-4672479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-ekaterina-bolovtsova-4672479.jpg"
+      }
+    },
+    {
+      "pk": 71,
+      "model": "products.product",
+      "fields": {
+        "name": "Modern Soap Dispenser Set",
+        "description": "Chic soap dispenser set with a minimalistic design, ideal for contemporary bathrooms. Easy to clean and maintain.",
+        "price": 14.99,
+        "category": 12,
+        "rating": 4.5,
+        "image_url": "https://images.pexels.com/photos/7262993/pexels-photo-7262993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-sarah-chai-7262993.jpg"
+      }
+    },
+    {
+      "pk": 72,
+      "model": "products.product",
+      "fields": {
+        "name": "Luxe Sink Pot",
+        "description": "A luxe sink pot to hold your toothbrush and anything else you want!",
+        "price": 14.95,
+        "category": 12,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/4194707/pexels-photo-4194707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "image": "pexels-karolina-grabowska-4194707.jpg"
+      }
+    }
+  ]
