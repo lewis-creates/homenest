@@ -53,3 +53,17 @@ p {
     margin-bottom: 1.5rem !important;
     text-transform: uppercase;
 }
+
+/* Logo */
+
+.logo {
+    width: 11rem;
+    height: auto;
+}
+
+#logo-small {
+    width: 7rem;
+    height: auto;
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
