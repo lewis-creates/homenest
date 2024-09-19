@@ -51,10 +51,10 @@
                 Bedroom
             </a>
             <div class="dropdown-menu" aria-labelledby="bedroom-link">
-                <a href="" class="dropdown-item">Sheets</a>
-                <a href="" class="dropdown-item">Wardrobes</a>
-                <a href="" class="dropdown-item">Pillows</a>
-                <a href="" class="dropdown-item">Shop full
+                <a href="{% url 'products' %}?category=sheets" class="dropdown-item" class="dropdown-item">Sheets</a>
+                <a href="{% url 'products' %}?category=wardrobes" class="dropdown-item" class="dropdown-item">Wardrobes</a>
+                <a href="{% url 'products' %}?category=pillows" class="dropdown-item" class="dropdown-item">Pillows</a>
+                <a href="{% url 'products' %}?category=sheets,wardrobes,pillows" class="dropdown-item">Shop full
                     range</a>
             </div>
         </li>
@@ -65,7 +65,7 @@
                 Bathroom
             </a>
             <div class="dropdown-menu" aria-labelledby="bathroom-link">
-                <a href="" class="dropdown-item">Towels</a>
+                <a href="">Towels</a>
                 <a href="" class="dropdown-item">Mirrors</a>
                 <a href="" class="dropdown-item">Accessories</a>
                 <a href="" class="dropdown-item">Shop full
