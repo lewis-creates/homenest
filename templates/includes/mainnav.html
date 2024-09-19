@@ -37,10 +37,10 @@
                 Living Room
             </a>
             <div class="dropdown-menu" aria-labelledby="living-room-link">
-                <a href="" class="dropdown-item">Chairs</a>
-                <a href="" class="dropdown-item">Televisions</a>
-                <a href="" class="dropdown-item">Tables</a>
-                <a href="" class="dropdown-item">Shop full
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=televisions" class="dropdown-item">Televisions</a>
+                <a href="{% url 'products' %}?category=tables" class="dropdown-item" class="dropdown-item">Tables</a>
+                <a href="{% url 'products' %}?category=chairs,televisions,tables" class="dropdown-item" class="dropdown-item">Shop full
                     range</a>
             </div>
         </li>
