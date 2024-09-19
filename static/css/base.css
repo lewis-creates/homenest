@@ -67,3 +67,19 @@ p {
     margin-left: 0.25rem;
     margin-right: 0;
 }
+
+/* Home Page */
+
+.home-background {
+    background: url(../../media/homemainimagenew.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.home-text-background {
+    background-color: rgba(65, 90, 119, 0.8);
+    border-radius: 1rem;
+    padding: 1rem 1.3rem;
+}
