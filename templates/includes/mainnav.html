@@ -65,10 +65,10 @@
                 Bathroom
             </a>
             <div class="dropdown-menu" aria-labelledby="bathroom-link">
-                <a href="">Towels</a>
-                <a href="" class="dropdown-item">Mirrors</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">Shop full
+                <a href="{% url 'products' %}?category=towels" class="dropdown-item">Towels</a>
+                <a href="{% url 'products' %}?category=mirrors" class="dropdown-item" class="dropdown-item">Mirrors</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=towels,mirrors,accessories" class="dropdown-item" class="dropdown-item">Shop full
                     range</a>
             </div>
         </li>
