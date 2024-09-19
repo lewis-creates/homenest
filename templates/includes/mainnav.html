@@ -24,10 +24,10 @@
                 Kitchen
             </a>
             <div class="dropdown-menu" aria-labelledby="kitchen-link">
-                <a href="" class="dropdown-item">Cooking</a>
-                <a href="" class="dropdown-item">Kettles</a>
-                <a href="" class="dropdown-item">Cutlery</a>
-                <a href="" class="dropdown-item">Shop full range</a>
+                <a href="{% url 'products' %}?category=cooking" class="dropdown-item">Cooking</a>
+                <a href="{% url 'products' %}?category=kettles" class="dropdown-item">Kettles</a>
+                <a href="{% url 'products' %}?category=cutlery" class="dropdown-item">Cutlery</a>
+                <a href="{% url 'products' %}?category=cooking,kettles,cutlery" class="dropdown-item">Shop full range</a>
             </div>
         </li>
 
