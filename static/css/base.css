@@ -68,6 +68,23 @@ p {
     margin-right: 0;
 }
 
+/* Navigation */
+
+.dropdown-menu {
+    --bs-dropdown-link-active-color: #000;
+    --bs-dropdown-link-active-bg: #fff;
+    --bs-dropdown-link-disabled-color: #000;
+    --bs-dropdown-border-radius: 0;
+}
+
+#main-nav {
+    background-color: #415A77;
+    --bs-navbar-color: #fff;
+    --bs-navbar-hover-color: #d5d5d5;
+    --bs-navbar-active-color: #d5d5d5;
+}
+
+
 /* Home Page */
 
 .home-background {
