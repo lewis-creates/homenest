@@ -12,14 +12,44 @@ def all_products(request):
 
     query = None
     categories = None
+    sort = None
+    direction = None
 
-    # Handle category filtering
-    if 'category' in request.GET:
+    if request.GET:
+        # Handle sorting
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'price':
+                # Sort by price
+                direction = request.GET.get('direction', 'asc')
+                sort_by = 'price' if direction == 'asc' else '-price'
+                products = products.order_by(sort_by)
+            elif sortkey == 'rating':
+                # Sort by rating (with products without ratings at the end)
+                direction = request.GET.get('direction', 'desc')
+                products = sort_by_rating(products, direction)
+            elif sortkey == 'name':
+                # Sort by product name
+                direction = request.GET.get('direction', 'asc')
+                sort_by = 'name' if direction == 'asc' else '-name'
+                products = products.order_by(sort_by)
+            elif sortkey == 'category':
+                # Sort by category name
+                direction = request.GET.get('direction', 'asc')
+                sort_by = (
+                    'category__name'
+                    if direction == 'asc'
+                    else '-category__name'
+                )
+                products = products.order_by(sort_by)
+
+            # Handle category filtering
+        if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-
-    if request.GET:
+                
          # Handle search
         if 'q' in request.GET:
             query = request.GET['q']
@@ -32,14 +62,18 @@ def all_products(request):
                     request, "You didn't enter any search criteria!"
                 )
                 return redirect(reverse('products'))
-                
+
+    current_sorting = f'{sort}_{direction}' if sort and direction else None
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
+
 
 
 def product_detail(request, product_id):
