@@ -84,6 +84,32 @@ p {
     --bs-navbar-active-color: #d5d5d5;
 }
 
+.search-bar {
+    color: #000;
+    border: 1px solid #0D1B2A;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+    font-size: 0.9rem;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #0D1B2A;
+}
+
+.navbar {
+    --bs-navbar-padding-y: 0rem;
+}
+
+#free-delivery-banner {
+    background-color: #0D1B2A;
+    color: #fff;
+}
+
 
 /* Home Page */
 
