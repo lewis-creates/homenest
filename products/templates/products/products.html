@@ -59,7 +59,7 @@
     <div class="col">
       <div class="product-card d-flex flex-column h-100">
         <div class="card h-100 border-0">
-          <a href="">
+          <a href="{% url 'product_detail' product.id %}">
             {% if product.image %}
             <!-- Product image -->
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
@@ -89,7 +89,7 @@
           </a>
         </small>
         </span>
- 
+        
         </div>
         <!-- Product rating -->
         <div class="card-footer border-0 bg-transparent mt-auto product-padding">
@@ -101,9 +101,9 @@
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </div>
-          {% endfor %}
 
           <!-- Back to top button -->
 <div class="to-top-button btn btn-primary">
