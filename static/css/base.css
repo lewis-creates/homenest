@@ -177,3 +177,23 @@ p {
     border-radius: 1rem;
     padding: 1rem 1.3rem;
 }
+
+/* Buttons */
+
+.btn-primary {
+    --bs-btn-bg: #0D1B2A;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: #070f17;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #070f17;
+}
+
+
+.btn-outline-primary {
+    --bs-btn-color: #0D1B2A;
+    --bs-btn-border-color: #0D1B2A;
+    --bs-btn-hover-bg: #0D1B2A;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #0D1B2A;
+    --bs-btn-active-border-color: #0D1B2A;
+}
