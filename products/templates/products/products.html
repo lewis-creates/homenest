@@ -62,6 +62,36 @@
               <p class="card-text"><strong>£{{ product.price }}</strong></p>
             </div>
           </a>
+          <!-- Product category (separate link) -->
+          {% if product.category %}
+          <span class="mt-1"><small>
+          <a href="{% url 'products' %}?category={{ product.category.name }}" class="category-link">
+            {% if product.category.name|in_category:"cooking,kettles,cutlery" %}
+            <i class="fa-solid fa-utensils me-1 category-icon"></i>{{ product.category.friendly_name }}
+            {% elif product.category.name|in_category:"chairs,televisions,tables" %}
+            <i class="fa-solid fa-couch me-1 category-icon"></i>{{ product.category.friendly_name }}
+            {% elif product.category.name|in_category:"sheets,wardrobes,pillows" %}
+            <i class="fa-solid fa-bed me-1 category-icon"></i>{{ product.category.friendly_name }}
+            {% elif product.category.name|in_category:"towels,mirrors,accessories" %}
+            <i class="fa-solid fa-bath me-1 category-icon"></i>{{ product.category.friendly_name }}
+            {% endif %}
+          </a>
+        </small>
+        </span>
+          {% endif %}
+        </div>
+        <!-- Product rating -->
+        <div class="card-footer border-0 bg-transparent mt-auto product-padding">
+          {% if product.rating > 0 %}
+          <p class="product-rating"><i class="fa-solid fa-star rating-star"></i> {{ product.rating }}/5</p>
+          {% else %}
+          <p class="product-rating">No rating</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           {% endfor %}
 
   {% endblock %}
