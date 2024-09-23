@@ -44,3 +44,20 @@
                     </span>
                     {% endif %}
                 </p>
+                 <!-- Product rating -->
+                 {% if product.rating > 0 %}
+                 <p><i class="fas fa-star me-1 rating-star"></i>{{ product.rating }} / 5</p>
+                 {% else %}
+                 <p>No Rating</p>
+                 {% endif %}
+                 <!-- Product description -->
+                 <p class="mt-3">{{ product.description }}</p>
+                  <!-- Add to bag -->
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <!-- Product quantity -->
+                        <div class="col-12">
+                            <p class="mt-3"><strong><label for="qty-input">Quantity:</label></strong></p>
+                            <div class="w-50">
+                                <div class="input-group input-group-{{ product.id }}">
