@@ -43,6 +43,16 @@
           </select>
         </div>
       </div>
+       <!-- Products found for search query -->
+    <div class="col-12 col-md-6 order-md-first text-center text-md-start">
+      <p class="text-muted mt-3">
+        {% if search_term or current_categories or current_sorting != 'None_None' %}
+        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+        {% endif %}
+        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+      </p>
+    </div>
+  </div>
   <!-- Product list -->
   <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
     {% for product in products %}
