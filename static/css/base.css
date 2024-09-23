@@ -197,3 +197,18 @@ p {
     --bs-btn-active-bg: #0D1B2A;
     --bs-btn-active-border-color: #0D1B2A;
 }
+
+/* Back to top buttons */
+
+.to-top-button {
+    height: 42px;
+    width: 120px;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+}
+
+.btt-link {
+    text-decoration: none;
+    color: #fff;
+}
