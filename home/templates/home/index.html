@@ -14,4 +14,48 @@
     </div>
 </div>
 
+<!-- Categories container -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-lg-2">
+        <!-- Shop Kitchen category -->
+        <div class="col mb-4">
+            <a href="{% url 'products' %}?category=cooking,kettles,cutlery">
+                <div class="category-box">
+                    <div class="category-image kitchen-category"></div>
+                    <div class="btn btn-lg btn-primary category-button">Shop Kitchen</div>
+                </div>
+            </a>
+        </div>
+        <!-- Shop Living Room category -->
+        <div class="col mb-4">
+            <a href="{% url 'products' %}?category=chairs,televisions,tables">
+                <div class="category-box">
+                    <div class="category-image living-room-category"></div>
+                    <div class="btn btn-lg btn-primary category-button">Shop Living Room</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-lg-2">
+        <!-- Shop Bedroom category -->
+        <div class="col mb-4">
+            <a href="{% url 'products' %}?category=sheets,wardrobes,pillows">
+                <div class="category-box">
+                    <div class="category-image bedroom-category"></div>
+                    <div class="btn btn-lg btn-primary category-button">Shop Bedroom</div>
+                </div>
+            </a>
+        </div>
+        <!-- Shop Bathroom category -->
+        <div class="col mb-4">
+            <a href="{% url 'products' %}?category=towels,mirrors,accessories">
+                <div class="category-box">
+                    <div class="category-image bathroom-category"></div>
+                    <div class="btn btn-lg btn-primary category-button">Shop Bathroom</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
