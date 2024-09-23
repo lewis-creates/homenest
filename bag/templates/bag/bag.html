@@ -9,5 +9,19 @@
             <h1 class="text-center page-heading">Shopping Bag</h1>
         </div>
     </div>
+    {% if bag_items %}
+    <div class="row d-block d-md-none">
+        <div class="col">
+            <!-- Bag total for small mobile devices -->
+            {% include "bag/bag-total.html" %}
+        </div>
+    </div>
+    <div class="row d-block d-md-none">
+        <div class="col">
+            <!-- Checkout buttons for small mobile devices -->
+            {% include "bag/checkout-buttons.html" %}
+            <p class="text-muted mb-5">A summary of your bag contents is below</p>
+        </div>
+    </div>
 
 {% endblock %}
