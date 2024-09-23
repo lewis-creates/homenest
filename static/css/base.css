@@ -178,6 +178,49 @@ p {
     padding: 1rem 1.3rem;
 }
 
+.category-box {
+    position: relative;
+}
+
+.category-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #dee2e6;
+}
+
+.kitchen-category {
+    background-image: url(../../media/homekitchenimagenew.webp);
+}
+
+.living-room-category {
+    background-image: url(../../media/homelivingroomimagenew.webp);
+}
+
+.bedroom-category {
+    background-image: url(../../media/homebedroomimagenew.webp);
+}
+
+.bathroom-category {
+    background-image: url(../../media/homebathroomimagenew.webp);
+}
+
+.category-button {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 2rem;
+    width: 50%;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.category-box:hover .category-button {
+    background-color: #0D1B2A;
+    color: white;
+}
+
+
 /* Buttons */
 
 .btn-primary {
