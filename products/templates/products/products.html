@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
 
 {% block content %}
 <!-- Products container -->
@@ -66,7 +67,7 @@
           {% if product.category %}
           <span class="mt-1"><small>
           <a href="{% url 'products' %}?category={{ product.category.name }}" class="category-link">
-            {% if product.category.name|in_category:"cooking,kettles,cutlery" %}
+            { %if product.category.name|in_category:"cooking,kettles,cutlery" %}
             <i class="fa-solid fa-utensils me-1 category-icon"></i>{{ product.category.friendly_name }}
             {% elif product.category.name|in_category:"chairs,televisions,tables" %}
             <i class="fa-solid fa-couch me-1 category-icon"></i>{{ product.category.friendly_name }}
@@ -78,7 +79,7 @@
           </a>
         </small>
         </span>
-          {% endif %}
+ 
         </div>
         <!-- Product rating -->
         <div class="card-footer border-0 bg-transparent mt-auto product-padding">
