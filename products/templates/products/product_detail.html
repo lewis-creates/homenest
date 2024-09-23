@@ -19,3 +19,28 @@
                 {% endif %}
             </div>
         </div>
+         <!-- Product details -->
+         <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <!-- Product name -->
+                <h1 class="mb-0 heading-3">{{ product.name }}</h1>
+                <!-- Product price -->
+                <p class="mb-3 heading-5">£{{ product.price }}</p>
+                <!-- Product category -->
+                <p class="mb-3">
+                    {% if product.category %}
+                    <span class="mt-1">
+                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="product-detail-category">
+                            {% if product.category.name|in_category:"cooking,kettles,cutlery" %}
+                            <i class="fa-solid fa-utensils me-1 category-icon"></i>{{ product.category.friendly_name }}
+                            {% elif product.category.name|in_category:"chairs,televisions,tables" %}
+                            <i class="fa-solid fa-couch me-1 category-icon"></i>{{ product.category.friendly_name }}
+                            {% elif product.category.name|in_category:"sheets,wardrobes,pillows" %}
+                            <i class="fa-solid fa-bed me-1 category-icon"></i>{{ product.category.friendly_name }}
+                            {% elif product.category.name|in_category:"towels,mirrors,accessories" %}
+                            <i class="fa-solid fa-bath me-1 category-icon"></i>{{ product.category.friendly_name }}
+                            {% endif %}
+                        </a>
+                    </span>
+                    {% endif %}
+                </p>
