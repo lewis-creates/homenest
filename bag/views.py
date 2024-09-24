@@ -1,4 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    HttpResponse,
+    get_object_or_404
+)
 
 def view_bag(request):
     """ A view that renders the bag contents page """
@@ -45,3 +51,40 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """
+    Adjust the quantity of the specified product to the specified amount
+    """
+
+    product = get_object_or_404(Product, pk=item_id)
+    bag = request.session.get('bag', {})
+
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except ValueError:
+        messages.error(request, "Quantity must be a number between 1-99.")
+        return redirect(reverse('view_bag'))
+
+    # Validate quantity
+    if quantity > 99:
+        quantity = 99
+        messages.warning(request, f"Quantity for {product.name}"
+                         " has been set to the maximum allowed value"
+                         " of 99.")
+    elif quantity < 1:
+        quantity = 1
+        messages.warning(request, f"Quantity for {product.name}"
+                         " has been set to the minimum allowed value of 1.")
+
+    if quantity > 0:
+        bag[item_id] = quantity
+        messages.success(request, f'Updated {product.name} quantity'
+                         f' to {bag[item_id]}')
+    else:
+        bag.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your bag')
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
