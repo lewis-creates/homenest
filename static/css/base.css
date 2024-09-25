@@ -278,3 +278,16 @@ p {
 .card-img-top {
     border-radius: 0;
 }
+
+.product-padding {
+    padding: 1rem 0 0 0;
+}
+
+.rating-star,
+.category-icon {
+    color: #415A77 !important;
+}
+
+.product-rating {
+    font-size: 0.9rem;
+}
