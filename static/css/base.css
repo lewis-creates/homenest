@@ -54,6 +54,13 @@ p {
     text-transform: uppercase;
 }
 
+/* Utilites */
+
+.cursor-pointer {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* Logo */
 
 .logo {
