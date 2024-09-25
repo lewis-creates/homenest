@@ -319,3 +319,33 @@ p {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* Messages (toasts) */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.free-delivery-toast {
+    background-color: #415A77;
+    color: #fff;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 378px) {
+    .message-container {
+        width: 91vw;
+    }
+}
