@@ -434,3 +434,106 @@ p {
         width: 91vw;
     }
 }
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+    margin-bottom: 0.8rem;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #0D1B2A;
+    border: 1px solid #0D1B2A;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #0D1B2A;
+}
+
+/* Forms */
+
+.extra-form-label-styling {
+    color: #000;
+    border: 1px solid #0D1B2A;
+    height: 45px;
+    padding: 10px 12px;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+    margin-bottom: 0.8rem;
+    appearance: menulist;
+}
+
+.extra-form-label-styling:focus,
+.extra-form-label-styling-tall:focus,
+.extra-form-label-styling-rating:focus,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #0D1B2A;
+}
+
+.extra-form-label-styling-tall {
+    color: #000;
+    border: 1px solid #0D1B2A;
+    height: 120px;
+    padding: 10px 12px;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+    margin-bottom: 0.8rem;
+}
+
+.extra-form-label-styling-rating {
+    color: #000;
+    border: 1px solid #0D1B2A;
+    height: 45px;
+    padding: 10px 12px;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+    margin-bottom: 0.8rem;
+}
+
+/* Contact page */
+
+.contact-info {
+    color: #000 !important;
+}
+
+.contact-links {
+    text-decoration: none !important;
+    color: #000 !important;
+}
