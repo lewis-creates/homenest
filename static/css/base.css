@@ -348,6 +348,35 @@ p {
     font-size: 0.9rem;
 }
 
+.accordion {
+    --bs-accordion-border-radius: none;
+    --bs-accordion-inner-border-radius: none;
+    --bs-accordion-border-color: #415A77;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button {
+    color: #fff;
+    background-color: #415A77;
+}
+
+.accordion-button::after {
+    filter: invert(100%) brightness(2);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.review-muted-text {
+    font-size: 0.9rem;
+}
+
+.input-group-text {
+    padding: 0rem;
+}
+
+
 /* Product Add and Edit Form */
 
 .btn-file {
