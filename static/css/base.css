@@ -255,3 +255,26 @@ p {
     text-decoration: none;
     color: #fff;
 }
+
+/* Products */
+
+.product-card a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
+.product-detail-category {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-card .card a:hover .card-title,
+.product-card .card a:hover .card-text,
+.category-link:hover,
+.product-detail-category:hover {
+    text-decoration: underline;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
