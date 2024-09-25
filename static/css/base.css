@@ -168,6 +168,43 @@ p {
     }
 }
 
+/* Footer */
+
+.footer {
+    background-color: #0D1B2A;
+    color: #fff;
+}
+
+.footer-heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: -0.1rem;
+}
+
+.footer-quick-link,
+.footer-email,
+.footer-tel {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-quick-link:hover,
+.footer-email:hover,
+.footer-social-links:hover,
+.footer-tel:hover {
+    color: #d5d5d5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.footer-social-links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.hr-footer {
+    width: 7rem;
+}
 
 /* Buttons */
 
