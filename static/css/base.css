@@ -169,6 +169,53 @@ p {
 }
 
 
+/* Buttons */
+
+.btn-primary {
+    --bs-btn-bg: #0D1B2A;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: #070f17;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #070f17;
+}
+
+.btn-checkout-primary {
+    --bs-btn-bg: #0D1B2A;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: #070f17;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-border-radius: none;
+    color: #fff;
+}
+
+.btn-checkout-primary:hover {
+    color: #fff;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #0D1B2A;
+    --bs-btn-border-color: #0D1B2A;
+    --bs-btn-hover-bg: #0D1B2A;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #0D1B2A;
+    --bs-btn-active-border-color: #0D1B2A;
+}
+
+/* Back to top buttons */
+
+.to-top-button {
+    height: 42px;
+    width: 120px;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+}
+
+.btt-link {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* Home Page */
 
 .home-background {
@@ -227,41 +274,6 @@ p {
     color: white;
 }
 
-
-/* Buttons */
-
-.btn-primary {
-    --bs-btn-bg: #0D1B2A;
-    --bs-btn-border-color: none;
-    --bs-btn-hover-bg: #070f17;
-    --bs-btn-hover-border-color: none;
-    --bs-btn-active-bg: #070f17;
-}
-
-
-.btn-outline-primary {
-    --bs-btn-color: #0D1B2A;
-    --bs-btn-border-color: #0D1B2A;
-    --bs-btn-hover-bg: #0D1B2A;
-    --bs-btn-hover-border-color: none;
-    --bs-btn-active-bg: #0D1B2A;
-    --bs-btn-active-border-color: #0D1B2A;
-}
-
-/* Back to top buttons */
-
-.to-top-button {
-    height: 42px;
-    width: 120px;
-    position: fixed;
-    bottom: 12px;
-    right: 12px;
-}
-
-.btt-link {
-    text-decoration: none;
-    color: #fff;
-}
 
 /* Products */
 
