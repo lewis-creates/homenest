@@ -162,3 +162,20 @@
           </div>
       </div>
   </div>
+
+  <!-- Loading spinner -->
+<div id="loading-overlay">
+    <p class="loading-spinner heading-1">
+        <span>
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+    </p>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
