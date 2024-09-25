@@ -146,6 +146,14 @@
     {% endblock %}
 
     {% block postloadjs %}
+     <!-- Toasts JS -->
+     <script>
+        var toasts = document.querySelectorAll('.toast');
+        toasts.forEach(function (toast) {
+            var toastEl = new bootstrap.Toast(toast);
+            toastEl.show();
+        });
+    </script>
     {% endblock %}
     
     
