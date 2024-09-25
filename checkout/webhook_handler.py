@@ -34,3 +34,26 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
+
+def handle_payment_intent_succeeded(self, event):
+        """
+        Handle the payment_intent.succeeded webhook from Stripe
+        """
+        intent = event.data.object
+        pid = intent.id
+        bag = intent.metadata.bag
+        save_info = intent.metadata.save_info
+
+        # Retrieve the Charge object
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+
+        billing_details = stripe_charge.billing_details
+        shipping_details = intent.shipping
+        grand_total = round(stripe_charge.amount / 100, 2)
+
+        # Clean shipping data
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
