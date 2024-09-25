@@ -77,6 +77,26 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+def sort_by_rating(products, direction):
+    """
+    Helper function to sort products by rating.
+    Products with ratings are sorted by rating value,
+    while products without ratings are placed at the end.
+    """
+    if direction == 'asc':
+        products = products.annotate(
+            avg_rating=Avg('reviews__rating')).order_by(F('avg_rating').asc(
+                nulls_last=True)
+        )
+    else:
+        products = products.annotate(
+            avg_rating=Avg('reviews__rating')).order_by(F('avg_rating').desc(
+                nulls_last=True)
+        )
+
+    return products
+
+
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
