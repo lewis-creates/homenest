@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q, Avg, F
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Review
+from .forms import ProductForm
 
 
 
@@ -103,8 +105,51 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Handle review deletion or submission
+    if request.method == 'POST':
+        if ('delete_review' in request.POST and
+                request.POST.get('delete_review') == "true"):
+            return handle_review_deletion(request, product)
+        else:
+            handle_review_submission(request, product)
+
+    reviews = Review.objects.filter(product=product)
+
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def add_product(request):
+    """ Add a product """
+
+    # Superuser check
+    if not request.user.is_superuser:
+        # Error message if user is not superuser
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    # Handle product addition
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Save new product
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            # Error message if form data is not valid
+            messages.error(request,
+                           'Failed to add product. Check the form is valid.')
+    else:
+        form = ProductForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'products/add_product.html', context)
+
