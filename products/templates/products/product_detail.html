@@ -20,8 +20,8 @@
                 {% endif %}
             </div>
         </div>
-         <!-- Product details -->
-         <div class="col-12 col-md-6 col-lg-4">
+        <!-- Product details -->
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <!-- Product name -->
                 <h1 class="mb-0 heading-3">{{ product.name }}</h1>
@@ -45,15 +45,43 @@
                     </span>
                     {% endif %}
                 </p>
-                 <!-- Product rating -->
-                 {% if product.rating > 0 %}
-                 <p><i class="fas fa-star me-1 rating-star"></i>{{ product.rating }} / 5</p>
-                 {% else %}
-                 <p>No Rating</p>
-                 {% endif %}
-                 <!-- Product description -->
-                 <p class="mt-3">{{ product.description }}</p>
-                  <!-- Add to bag -->
+                <!-- Product rating -->
+                {% if product.rating > 0 %}
+                <p><i class="fas fa-star me-1 rating-star"></i>{{ product.rating }} / 5</p>
+                {% else %}
+                <p>No Rating</p>
+                {% endif %}
+                <!-- Product description -->
+                <p class="mt-3">{{ product.description }}</p>
+                <!-- Edit and delete product options for superuser -->
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                    <a class="text-danger" href="#" data-bs-toggle="modal"
+                        data-bs-target="#deleteProductModal">Delete</a>
+                </small>
+                <!-- Delete product modal -->
+                <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="deleteProductModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title heading-5">Confirm Delete</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete this product? This action cannot be undone.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <!-- Add to bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
@@ -62,8 +90,8 @@
                             <p class="mt-3"><strong><label for="qty-input">Quantity:</label></strong></p>
                             <div class="w-50">
                                 <div class="input-group input-group-{{ product.id }}">
-                                     <!-- Decrement quantity -->
-                                     <div class="input-group-text">
+                                    <!-- Decrement quantity -->
+                                    <div class="input-group-text">
                                         <button
                                             class="decrement-qty btn btn-primary rounded-0 decrement-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}" aria-label="Decrement quantity">
@@ -105,7 +133,119 @@
         </div>
     </div>
 
-    {% endblock %}
+    <!-- Reviews section -->
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <h2 class="heading-4 text-uppercase">Product Reviews</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <!-- Show review form for logged in users -->
+            {% if request.user.is_authenticated %}
+            <form method="POST" action=".">
+                {% csrf_token %}
+                <div>
+                    <label for="review" class="form-label mb-2">What did you think about this product?</label>
+                    <textarea name="details" class="form-control extra-form-label-styling-tall"
+                        placeholder="Enter your feedback here..." id="review" rows="5" required></textarea>
+                </div>
+                <div>
+                    <label for="rating" class="form-label my-2">Please rate this product</label>
+                    <select name="rating" class="form-select mb-3 extra-form-label-styling-rating" id="rating"
+                        aria-label="Choose Rating" required>
+                        <option value="" disabled selected>Please choose a rating...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-primary mb-1" type="submit">Submit</button>
+                </div>
+                <div>
+                    <p class="review-muted-text"><em>* Already reviewed this product? Submitting a new review will
+                            update your existing one.</em></p>
+                </div>
+            </form>
+            {% else %}
+            <!-- Login or register message -->
+            <p class="heading-6"><em>Please <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
+                    or <a href="{% url 'account_signup' %}" class="text-decoration-none">register</a> to post your own
+                    review.</em></p>
+            {% endif %}
+        </div>
+    </div>
+    <!-- Show existing reviews, if any -->
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            {% if reviews %}
+            <!-- Reviews accordion -->
+            <div class="accordion" id="reviews-accordion">
+                {% for review in reviews %}
+                <div class="accordion-item mb-1">
+                    <h3 class="accordion-header heading-2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse{{ review.id }}" aria-expanded="true"
+                            aria-controls="collapse{{ review.id }}">
+                            <span><strong>{{ review.rating }} star</strong> review submitted by
+                                <strong>{{ review.submitted_by }}</strong>...</span>
+                        </button>
+                    </h3>
+                    <div id="collapse{{ review.id }}" class="accordion-collapse collapse"
+                        data-bs-parent="#reviews-accordion">
+                        <div class="accordion-body">
+                            <p>Review: {{ review.details }}</p>
+                            <p>Date submitted: {{ review.date_submitted|date:"d-m-Y" }}</p>
+                            <!-- Show delete review button for user it belongs to and superuser -->
+                            {% if review.submitted_by == request.user or request.user.is_superuser %}
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#deleteReviewModal{{ review.id }}">
+                                Delete Review
+                            </button>
+
+                            <!-- Delete review modal -->
+                            <div class="modal fade" id="deleteReviewModal{{ review.id }}" tabindex="-1"
+                                aria-labelledby="deleteReviewModalLabel{{ review.id }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p class="modal-title fs-5" id="deleteReviewModalLabel{{ review.id }}">
+                                                Confirm Delete</p>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete this review? This action cannot be undone.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <form method="post" action="{% url 'product_detail' product.id %}">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="review_id" value="{{ review.id }}">
+                                                <input type="hidden" name="delete_review" value="true">
+                                                <button type="submit" class="btn btn-danger">Delete Review</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>No reviews have been submitted for this product yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
