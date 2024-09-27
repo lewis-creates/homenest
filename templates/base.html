@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="HomeNest is a homeware store offering a range of goods for all areas of your home!">
+    <meta name="description" content="HomeNest is a homeware store offering a range of goods or all areas of your home!">
+    <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}homenestfavicon.png">
     {% endblock %}
 
     {% block extra_meta %}
@@ -27,7 +28,7 @@
     {% endblock %}
 
     {% block corejs %}
-    <!-- jQuery -->
+    <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
@@ -43,34 +44,32 @@
     <title>HomeNest | Homeware Store</title>
 </head>
 
-
-
 <body>
-     <!-- Navigation -->
-     <header class="container-fluid">
+    <!-- Navigation -->
+    <header class="container-fluid">
         <div id="topnav" class="row d-none d-lg-flex">
-    <!-- Search -->
-    <div class="col-12 col-lg-4 my-auto text-lg-start">
-        <form method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control search-bar" type="text" name="q" placeholder="Search our site" aria-label="Search bar">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-black" type="submit" aria-label="Submit search">
-                        <span class="icon" aria-hidden="true">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-                        <!-- Logo -->
-                        <div class="col-12 col-lg-4 my-auto text-lg-center">
-                            <a href="{% url 'home' %}" class="nav-link">
-                                <img src="{{ MEDIA_URL }}/media/homenestlogo.png" alt="HomeNest Logo" class="logo">
-                            </a>
+            <!-- Search -->
+            <div class="col-12 col-lg-4 my-auto text-lg-start">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control search-bar" type="text" name="q" placeholder="Search our site" aria-label="Search bar">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black" type="submit" aria-label="Submit search">
+                                <span class="icon" aria-hidden="true">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
                         </div>
-                                    <!-- My account and shopping bag -->
+                    </div>
+                </form>
+            </div>
+            <!-- Logo -->
+            <div class="col-12 col-lg-4 my-auto text-lg-center">
+                <a href="{% url 'home' %}" class="nav-link">
+                    <img src="{{ MEDIA_URL }}homenestlogo.png" alt="Inhome Logo" class="logo">
+                </a>
+            </div>
+            <!-- My account and shopping bag -->
             <div class="col-12 col-lg-4 my-auto">
                 <ul class="list-inline text-center text-lg-end my-0">
                     <li class="nav-item list-inline-item dropdown pt-3">
@@ -84,8 +83,9 @@
                         <ul class="dropdown-menu" aria-labelledby="user-desktop-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Add New Product</a></li>
                             {% endif %}
-                            <li><a class="dropdown-item" href="">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                             {% else %}
                             <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
@@ -94,8 +94,8 @@
                         </ul>
                     </li>
                     <li class="list-inline-item">
+                        <a href="{% url 'view_bag' %}" class="nav-link">
                             <div class="text-center">
-                                <a href="{% url 'view_bag' %}" class="nav-link">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p>
                                     {% if grand_total %}
@@ -110,8 +110,8 @@
                 </ul>
             </div>
         </div>
-         <!-- Menu -->
-         <div class="row">
+        <!-- Menu -->
+        <div class="row">
             <nav class="navbar navbar-expand-lg w-100">
                 <button class="navbar-toggler ms-2 p-0 ps-1" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,8 +125,8 @@
         </div>
     </header>
 
-      <!-- Free delivery banner -->
-      <div class="container-fluid" id="free-delivery-banner">
+    <!-- Free delivery banner -->
+    <div class="container-fluid" id="free-delivery-banner">
         <div class="row text-center">
             <div class="col">
                 <p class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</p>
@@ -153,8 +153,6 @@
     </div>
     {% endif %}
 
-
-
     <!-- Main block content -->
     <div class="main-content">
         {% block content %}
@@ -165,8 +163,8 @@
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
-     <!-- Toasts JS -->
-     <script>
+    <!-- Toasts JS -->
+    <script>
         var toasts = document.querySelectorAll('.toast');
         toasts.forEach(function (toast) {
             var toastEl = new bootstrap.Toast(toast);
@@ -174,7 +172,7 @@
         });
     </script>
     {% endblock %}
-    
-    
+
 </body>
+
 </html>
