@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Edit product container -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h1 class="mb-4 mt-4 heading-2">Product Management</h1>
+            <p class="text-muted heading-5">Edit Product</p>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Edit product form -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-end">
+                    <a class="btn btn-outline-primary" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-primary" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // Update the filename display when a new image is selected
+    $('[data-id="new-image"]').change(function () {
+        var file = $(this)[0].files[0];
+        $('#filename').text(`Image will be set to: ${file.name}`);
+    });
+</script>
+{% endblock %}
