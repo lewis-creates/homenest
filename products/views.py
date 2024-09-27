@@ -8,9 +8,8 @@ from .models import Product, Category, Review
 from .forms import ProductForm
 
 
-
 def all_products(request):
-    """  A view to show all products, including sorting and search queries """
+    """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
 
@@ -48,13 +47,13 @@ def all_products(request):
                 )
                 products = products.order_by(sort_by)
 
-            # Handle category filtering
+        # Handle category filtering
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-                
-         # Handle search
+
+        # Handle search
         if 'q' in request.GET:
             query = request.GET['q']
             if query:
@@ -99,7 +98,6 @@ def sort_by_rating(products, direction):
     return products
 
 
-
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
@@ -121,6 +119,55 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def handle_review_submission(request, product):
+    """ Handle submission of a review for a product """
+
+    # Get review details
+    details = request.POST.get('details')
+    rating = request.POST.get('rating')
+
+    # Create or update the review
+    if details:
+        review, created = Review.objects.get_or_create(
+            product=product,
+            submitted_by=request.user,
+            defaults={'rating': rating, 'details': details}
+        )
+
+        # Feedback to the user
+        if created:
+            messages.success(request, 'Your review was successfully created.')
+        else:
+            review.rating = rating
+            review.details = details
+            review.save()
+            messages.info(request, 'Your existing review has been updated.')
+
+    # Redirect back to product detail page
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+def handle_review_deletion(request, product):
+    """ Handle deletion of a review for a product """
+
+    review_id = request.POST.get('review_id')
+    review = get_object_or_404(Review, id=review_id, product=product)
+
+    # Check if review belongs to user or if user is superuser
+    if review.submitted_by == request.user or request.user.is_superuser:
+        # Delete the review
+        review.delete()
+        messages.success(request, 'Review was successfully deleted.')
+    else:
+        # Error message if no persmission is granted
+        messages.error(request,
+                       'You do not have permission to delete this review.')
+
+    # Redirect back to the product detail page
+    return redirect(reverse('product_detail', args=[product.id]))
+
 
 @login_required
 def add_product(request):
