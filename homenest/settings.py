@@ -33,8 +33,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-lewiscreates-homenest-ndyla0qohtx.ws.codeinstitute-ide.net',
-    'localhost'
-    'homenest.herokuapp.com'
+    'localhost',
+    'homenest-762c80876e0f.herokuapp.com'
     ]
 
 
