@@ -323,3 +323,187 @@ I wanted to choose a font which wasn't mainstream and unique, but also smart and
 - This page is only accessible by the superuser, so customers without permission are not able to access this page via the product detail page or by entering the /products/edit/ into the URL bar.
 - Here, the superuser can edit existing products in the store.
 
+**Profile page**
+
+![Profile page](docs/features/other/profile-page.png)
+
+- This is the users profile page. Here they can update their personal information.
+- Users can also view their past order history. By clicking on the shortened version of their order number, they are taken to a page showing their full order details in case they need to look back on what they ordered.
+
+**Contact page**
+
+![Contact page](docs/features/other/contact-page.png)
+
+- The contact page is where the user can find multiple ways of contacting the store.
+- **Contact form**: The contact form allows the user a way of submitting a message to the store for a response. It requires a name, email, subject and enquiry message and once submitted, the form is sent to the HomeNest team's email address so they can assist the customer. If the user is already logged in, their email address is automatically entered for them.
+- **Contact details**: The contact page also features the company contact details, in case the user wishes to contact the store directly.
+
+## **Future Enhancements**
+
+Some possible enhancements which could be applied in the future include:
+
+- A section in the users profile which displays any previous reviews they have left for products, with the option to update or delete them directly from their profile.
+- A featured product section above the footer which shows on any page of the site, so the store can promote the most popular products, or products they wish to push at any given time.
+- A social account login feature, so the user can login to the website using their social media account rather than an email
+- A special offers section for any discounted products or special deals available
+- A 'You may also like...' section at the bottom of each product which shows products the user may be interested in based on what they are currently viewing
+- A 'Suggested for you' section on the users profile page which suggests products they may wish to purchase based on their previous order history
+- A newsletter signup, so the store can market their products and special offers directly to interested users.
+- Product images could be converted to WebP format to allow faster page loading
+
+## **Testing Phase**
+
+### **Responsiveness**
+
+Responsiveness was checked and worked as intended with the following browsers and screen sizes:
+
+- Extra Large (27" Mac Desktop):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+- Large (15" MacBook Pro Laptop):
+
+  - Chrome
+  - Firefox
+  - Safari
+
+- Medium (10.9" iPad):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+- Small (6" iPhone 13):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues, including the smallest device available in the list which was a Galaxy Z Fold 5.
+
+### **Functionality**
+
+| Function                                             | Expectation                                                                                                                                           | Pass? |
+|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
+| **Navigation**                                           |                                                                                                                                                       |       |
+| Search Bar (with search criteria)                    | On submit, redirect to products page showing products with names or descriptions matching users criteria                                               | Yes   |
+| Search Bar (no search criteria)                      | On submit, user is informed they submitted an empty search                                                                                            | Yes   |
+| Logo                                                 | On click, redirect to home page                                                                                                                        | Yes   |
+| My Account (logged out user)                         | On click, dropdown appears with register and login links. 'Register' directs  to the sign up page, 'Login'   to login page.                             | Yes   |
+| My Account (logged in user)                          | On click, dropdown appears with profile and logout links. 'My Profile' directs to users profile page, 'Logout'  to logout confirm page.                 | Yes   |
+| My Account (logged in superuser)                     | On click, superuser has same options as above plus 'Add a product' which directs them to the add product page.                                          | Yes   |
+| Shopping Bag                                         | On click, takes user to the shopping bag page.                                                                                                         | Yes   |
+| Shopping Bag Total                                   | Default value shown is £0.00 unless user has items in their shopping bag, in which case amount shown should reflect the bag total.                      | Yes   |
+| Home Nav Link                                        | On click, takes user to the home page.                                                                                                                 | Yes   |
+| All Products Nav Link                                | On click, dropdown appears with relevant options, all linking to their relevant pages.                                                                 | Yes   |
+| Kitchen Nav Link                                     | On click, dropdown appears with relevant options, all linking to their relevant pages.                                                                 | Yes   |
+| Living Room Nav Link                                 | On click, dropdown appears with relevant options, all linking to their relevant pages.                                                                 | Yes   |
+| Bedroom Nav Link                                     | On click, dropdown appears with relevant options, all linking to their relevant pages.                                                                 | Yes   |
+| Bathroom Nav Link                                    | On click, dropdown appears with relevant options, all linking to their relevant pages.                                                                 | Yes   |
+| Contact Nav Link                                     | On click, takes user to the contact page.                                                                                                               | Yes   |
+| **Footer**                                               |                                                                                                                                                       |       |
+| Quick Links                                          | On click, each link takes the user to the relevant page.                                                                                               | Yes   |
+| Telephone Number                                     | On click, the site attempts to start a phone call direct to the store.                                                                                  | Yes   |
+| Email                                                | On click,  the store attempts to start an email direct to the store via the users default email provider.                                               | Yes   |
+| Social Media Links                                   | On click, user is directed to the relevant social media platform.                                                                                      | Yes   |
+| **Home Page**                                            |                                                                                                                                                       |       |
+| Shop Now                                             | On click, takes user to the all products page.                                                                                                         | Yes   |
+| Kitchen Category Image                               | On click (on the image or the button), takes user to the kitchen products page.                                                                        | Yes   |
+| Living Room Category Image                           | On click (on the image or the button), takes user to the living room products page.                                                                    | Yes   |
+| Bedroom Category Image                               | On click (on the image or the button), takes user to the bedroom products page.                                                                        | Yes   |
+| Bathroom Category Image                              | On click (on the image or the button), takes user to the bathroom products page.                                                                       | Yes   |
+| **Products Page**                                        |                                                                                                                                                       |       |
+| Link to product detail                               | For each product shown, the product image, name and price all link to that products detail page.                                                       | Yes   |
+| Link to category                                     | For each product shown, the products category shown links to the category that product belongs to.                                                     | Yes   |
+| Sorting by price                                     | Sorting  low to high displays the products in ascending order by price, and high to low in descending order.                                           | Yes   |
+| Sorting by name                                      | Sorting  A-Z displays the products in alphabetical order by name, and Z-A in the reverse order.                                                        | Yes   |
+| Sorting by rating                                    | Sorting  low to high displays the products in ascending order by rating, and high to low in descending order. Products with  ratings are always displayed first. | Yes   |
+| Sorting by category                                  | Sorting  A-Z displays the products in alphabetical order by category, and Z-A in the reverse order.                                                    | Yes   |
+| Products Home                                        | On click, products Home link directs the user to the all products page                                                                                 | Yes   |
+| Products total                                       | Total number of products matches total number actually shown on page                                                                                   | Yes   |
+| Products (search query)                              | When user is taken to the products page from a search query, page confirms how many products were found based on their search criteria.                 | Yes   |
+| **Product Detail Page**                                  |                                                                                                                                                       |       |
+| Image                                                | On click, image opens in a new tab                                                                                                                     | Yes   |
+| Category                                             | On click, user is directed to the category in which the product belongs to                                                                             | Yes   |
+| Edit (superuser only)                                | When superuser is logged in, edit link is shown which directs superuser to the edit product page                                                       | Yes   |
+| Delete (superuser only)                              | When superuser is logged in, delete link is shown which prompts the delete product modal. The delete button deletes the product                        | Yes   |
+| Quantity Decrease (-)                                | On click, quantity is reduced by 1 (unless quantity is already 1, then decrease button is disabled)                                                    | Yes   |
+| Quantity Increase (+)                                | On click, quantity is increased by 1 (unless quantity is 99, then increase button is disabled)                                                         | Yes   |
+| Quantity input, manual entry                         | If a quantity below 1 or above 99 is manually entered, user is told to enter a valid quantity when attempting to add the product to the bag             | Yes   |
+| Keep shopping                                        | On click, user is directed to the all products page                                                                                                    | Yes   |
+| Add to bag (product not already in bag)              | On click, product is added to the users shopping bag in the desired quantity, with success message confirming the action and a button to proceed to the checkout. Bag total to update at top of page | Yes   |
+| Add to bag (product already in bag)                  | If product already in users bag and a further quantity is added making the new quantity above 99, bag quantity is set to 99 and user is informed. Otherwise, update bag quantity & total accordingly. | Yes   |
+| Product Review Form (logged in user)                 | For logged in users, product review form to be displayed and only submitted when feedback is entered and a rating is selected.                          | Yes   |
+| Product Review Form (user not logged in)             | Form is hidden and prompt for user to either login or register for an account is displayed.                                                            | Yes   |
+| Product Review Form Submission                       | On submit (provided validation criteria is met), review is added to the reviews accordion style list below.                                             | Yes   |
+| Product reviews                                      | If no reviews have been submitted for that product yet, message is displayed to that effect. Otherwise, reviews are stacked in a collapsable list.     | Yes   |
+| Product reviews, delete                              | When viewing a review, if it belongs to the logged in user or a superuser is logged in, delete button appears which prompts the delete review modal. Clicking the modals delete button deletes the review. | Yes   |
+| **Shopping Bag page**                                    |                                                                                                                                                       |       |
+| No products                                          | If no products are currently in the shopping bag, user is informed their bag is empty and provided with a keep shopping button which directs them to the all products page. | Yes   |
+| Products in bag                                      | If products are in the shopping bag, each products image, name, price, quantity and subtotal is shown                                                  | Yes   |
+| Product image                                        | Product image directs user to that particular product                                                                                                  | Yes   |
+| Update quantity (outside of 1-99 range)              | Update quantity to include same validation checks as on the product detail page to ensure quantity is always between 1 and 99. Message appear to inform the user if they try to go outside of the range | Yes   |
+| Update quantity (inside of 1-99 range)               | On click, quantity, subtotal, bag total and grand total to be updated accordingly. Delivery total to be updated if under free delivery threshold        | Yes   |
+| Remove                                               | On click, product is removed from the bag. Bag total and grand total updated accordingly (or revert to no products in bag message if last product is removed). If now below free delivery threshold, delivery total updated accordingly. | Yes   |
+| Keep shopping                                        | On click, direct user to all products page                                                                                                             | Yes   |
+| Secure checkout                                      | On click, direct user to checkout page                                                                                                                 | Yes   |
+| **Checkout page**                                        |                                                                                                                                                       |       |
+| Pre filled details                                   | If user is logged in and profile information is saved, customers details are pre-filled accordingly.                                                   | Yes   |
+| Save delivery information (logged in user)           | If user is logged in, checkbox to save delivery information is shown. Once order is placed, delivery information on profile page is updated.            | Yes   |
+| Save delivery information (user not logged in)       | If user is logged is not logged in, prompt to login or register appears taking them to the relevant pages.                                              | Yes   |
+| Adjust bag                                           | On click, direct user back to the shopping bag                                                                                                          | Yes   |
+| Charge warning                                       | Red warning message for charge amount to match the grand total on same page.                                                                           | Yes   |
+| Product image                                        | Product image in order summary to link to product page                                                                                                 | Yes   |
+| Complete order                                       | On click, loading spinner appears while order is processed. If order is successful, direct user to order confirmation page and success message appears. Clear shopping bag and reset bag total to £0.00 | Yes   |
+| Complete order continued                             | With successful order, if user is logged in, add order to order history on profile page and sent confirmation of order to users email address           | Yes   |
+| **Order confirmation page**                              |                                                                                                                                                       |       |
+| Order details                                        | All order details shown to match those that were entered originally. Unique order number assigned to the order                                         | Yes   |
+| Missed something                                     | Missed something button to direct user to all products page                                                                                            | Yes   |
+| **Profile page**                                         |                                                                                                                                                       |       |
+| Delivery information                                 | If user has previously saved delivery info via checkout page or previously saved via profile page, details are pre-populated.                          | Yes   |
+| Change password                                      | On click, direct user to change password page                                                                                                          | Yes   |
+| Update information                                   | On click, update any changed details in form above                                                                                                     | Yes   |
+| Order history                                        | All previous orders to be displayed, with order number acting as a link to order page. When clicked, message to appear informing user they are viewing an existing order | Yes   |
+| **Logout Page**                                          |                                                                                                                                                       |       |
+| Cancel                                               | On click, directs user to Home page and user is not logged out                                                                                         | Yes   |
+| Sign out                                             | On click, logs the user out, message appears to confirm and user is directed to the home page                                                          | Yes   |
+| **Sign Up/Register Page**                                |                                                                                                                                                       |       |
+| Sign in link                                         | On click, directs user to login page                                                                                                                   | Yes   |
+| Email validation                                     | On submit/sign up, if email address doesn’t match email address confirmation field, user is informed must retry with correct details                   | Yes   |
+| Username validation                                  | On submit/sign up, if username already exists, user is informed to make another choice                                                                 | Yes   |
+| Password validation                                  | On submit/sign up, if passwords don't match or meet the minimum criteria, user is informed with instructions as to what they must do to meet criteria  | Yes   |
+| Back to login                                        | On click, directs user to login page                                                                                                                   | Yes   |
+| Sign up                                              | On click, if all validation checks pass, user is sent an email to confirm their email address and registration. Once confirmed, account is created and user can login. | Yes   |
+| Sign up (email already registered)                   | As above, but email to user mentions that someone has tried to create an account using their email, but an account already exists.                     | Yes   |
+| **Login page**                                           |                                                                                                                                                       |       |
+| Signup link                                          | On click, directs user to sign up/register page                                                                                                        | Yes   |
+| Home button                                          | On click, directs user to the home page                                                                                                                | Yes   |
+| Sign in                                              | On click, if username/email and password match a users details stored in database, log the user in with success message                               | Yes   |
+| Forgot password                                      | On click, directs user to reset password page                                                                                                          | Yes   |
+| **Change password page**                                 |                                                                                                                                                       |       |
+| Back to login                                        | On click, directs user to login page                                                                                                                   | Yes   |
+| Change password                                      | On click, update the users password if current password matches current password currently stored in database and new password and new password (again) both match | Yes   |
+| **Reset password page**                                  |                                                                                                                                                       |       |
+| Back to login                                        | On click, directs user to login page                                                                                                                   | Yes   |
+| Reset my password                                    | On click, send password reset email to users email                                                                                                     | Yes   |
+| **Contact page**                                         |                                                                                                                                                       |       |
+| Contact form                                         | If user is logged in, email is pre-populated. On submit, if all fields are completed and match validation criteria, user is directed to home page and shown success message. Contact form is sent to In Home email address for a response | Yes   |
+| **Add product page (superuser only)**                    |                                                                                                                                                       |       |
+| Select image                                         | On click, opens image select window on users device. When image is selected and confirmed, message appears to user to let them know what the image will be set to. | Yes   |
+| Cancel                                               | On click, direct user to all products page                                                                                                             | Yes   |
+| Add product                                          | On click, provided required fields are completed/entered, add new product to store                                                                     | Yes   |
+| Access                                               | If any user other than the superuser attempts to access the add product page, they are informed they can't access it                                    | Yes   |
+| **Edit product page (superuser only)**                   |                                                                                                                                                       |       |
+| On load                                              | Info message to inform superuser what product they are editing                                                                                        | Yes   |
+| Pre-filled details                                   | Existing product details pre-filled in relevant fields                                                                                                 | Yes   |
+| Select image                                         | On click, opens image select window on users device. When image is selected and confirmed, message appears to user to let them know what the image will be set to. | Yes   |
+| Remove image                                         | On submit (update), if ticked, image is removed from the product                                                                                       | Yes   |
+| Cancel                                               | On click, direct user to all products page                                                                                                             | Yes   |
+| Update product                                       | On click, provided required fields are completed/entered, update existing product details                                                              | Yes   |
+| Access                                               | If any user other than the superuser attempts to access the edit product page, they are infomred they can't access it                                   | Yes   |
+| **404 page not found**                                   |                                                                                                                                                       |       |
+| Page not found                                       | For any 404 page not found errors, direct user to custom 404 error page                                                                                | Yes   |
+| **500 error page**                                       |                                                                                                                                                       |       |
+| 500 server error page                                | For any 500 server errors, direct user to custom 500 error page                                                                                        | Yes   |
