@@ -507,3 +507,462 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 | Page not found                                       | For any 404 page not found errors, direct user to custom 404 error page                                                                                | Yes   |
 | **500 error page**                                       |                                                                                                                                                       |       |
 | 500 server error page                                | For any 500 server errors, direct user to custom 500 error page                                                                                        | Yes   |
+
+### **Validators**
+
+**HTML Validators**
+
+The following files were passed through the [W3C HTML Validator](https://validator.w3.org/) and passed with no errors. Please note, to test each file, the complete HTML via the page source on the front end of each page was passed through the direct input section of the validator, thus avoiding errors due to the django statements.
+
+| File                         | Pass?  |
+|------------------------------|--------|
+| bag-total.html               | Yes    |
+| bag.html                     | Yes    |
+| checkout-buttons.html        | Yes    |
+| checkout_success.html        | Yes    |
+| checkout.html                | Yes    |
+| contact.html                 | Yes    |
+| index.html                   | Yes    |
+| quantity_input_script.html   | Yes    |
+| add_product.html             | Yes    |
+| edit_product.html            | Yes    |
+| product_detail.html          | Yes    |
+| products.html                | Yes    |
+| profile.html                 | Yes    |
+| toast_error.html             | Yes    |
+| toast_info.html              | Yes    |
+| toast_success.html           | Yes    |
+| toast_warning.html           | Yes    |
+| footer.html                  | Yes    |
+| main-nav.html                | Yes    |
+| mobile-top-header.html       | Yes    |
+| 404.html                     | Yes    |
+| 500.html                     | Yes    |
+| base.html                    | Yes    |
+| signup.html                  | Yes    |
+| login.html                   | Yes    |
+| password_change.html         | Yes    |
+| password_reset.html          | Yes    |
+
+**CSS Validator**
+
+The following files were passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and passed with no errors.
+
+| File                       | Pass?  |
+|----------------------------|--------|
+| checkout.css               | Yes    |
+| profile.css                | Yes    |
+| base.css                   | Yes    |
+
+**JSHint**
+
+The [JSHint](https://jshint.com/) javascript validator was used to check the javascript used within the store. All files below passed with no errors.
+
+| File                                       | Pass?  |
+|--------------------------------------------|--------|
+| bag.html (script at the bottom)            | Yes    |
+| stripe_elements.js                         | Yes    |
+| quantity_input_script.html                 | Yes    |
+| add_product.html (script at the bottom)    | Yes    |
+| edit_product.html (script at the bottom)   | Yes    |
+| products.html (script at the bottom)       | Yes    |
+| base.html (script at the bottom)           | Yes    |
+
+**CI Python Linter**
+
+All python files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/) and all passed with no errors found.
+
+| App                          | File                  | Pass?  |
+|------------------------------|-----------------------|--------|
+| bag > templatetags           | bag_tools             | Yes    |
+| bag                          | admin                 | Yes    |
+| bag                          | apps                  | Yes    |
+| bag                          | contexts              | Yes    |
+| bag                          | models                | Yes    |
+| bag                          | urls                  | Yes    |
+| bag                          | views                 | Yes    |
+| checkout                     | admin                 | Yes    |
+| checkout                     | apps                  | Yes    |
+| checkout                     | forms                 | Yes    |
+| checkout                     | models                | Yes    |
+| checkout                     | signals               | Yes    |
+| checkout                     | urls                  | Yes    |
+| checkout                     | views                 | Yes    |
+| checkout                     | webhook_handler       | Yes    |
+| checkout                     | webhooks              | Yes    |
+| contact                      | admin                 | Yes    |
+| contact                      | apps                  | Yes    |
+| contact                      | forms                 | Yes    |
+| contact                      | models                | Yes    |
+| contact                      | urls                  | Yes    |
+| contact                      | views                 | Yes    |
+| home                         | admin                 | Yes    |
+| home                         | apps                  | Yes    |
+| home                         | models                | Yes    |
+| home                         | urls                  | Yes    |
+| home                         | views                 | Yes    |
+| in_home                      | asgi                  | Yes    |
+| in_home                      | settings              | Yes    |
+| in_home                      | urls                  | Yes    |
+| in_home                      | wsgi                  | Yes    |
+| products > templatetags      | custom_filters        | Yes    |
+| products                     | admin                 | Yes    |
+| products                     | apps                  | Yes    |
+| products                     | forms                 | Yes    |
+| products                     | models                | Yes    |
+| products                     | urls                  | Yes    |
+| products                     | views                 | Yes    |
+| products                     | widgets               | Yes    |
+| profiles                     | admin                 | Yes    |
+| profiles                     | apps                  | Yes    |
+| profiles                     | forms                 | Yes    |
+| profiles                     | models                | Yes    |
+| profiles                     | urls                  | Yes    |
+| profiles                     | views                 | Yes    |
+| custom_storages              | custom_storages       | Yes    |
+| manage                       | manage                | Yes    |
+
+**WAVE Accessibility Checker**
+
+The [WAVE Accessibility Checker](https://wave.webaim.org/) was used on each page of the store to ensure it is accessible as possible. All pages passed with no errors or contrast errors, apart from the following all auth pages provided by the Django framework:
+
+- Login/Sign In
+- Register/Sign Up
+- Change password (when logged in)
+- Reset password (when logged out)
+
+The errors were suggesting that the input fields on these pages did not include corresponding labels. However, on click the WAVE tool points to each potential error within your code and upon inspection, each input field included a matching label. The input fields themselves include a placeholder.
+
+**Lighthouse**
+
+PLACEHOLDER NEEDS TESTS
+
+### **Testing user stories**
+
+**User story 1**: As a new user, I want to immediately understand the site's purpose.
+
+**Achieved?**: Yes. Upon entering the site, you are greeted with a welcome message summarising what the store sells along with a prompt to start shopping. The logo has also been designed to make it as clear as possible what the store is about, which is shown on every page of the site.
+
+**User story 2**: As a new user, I want to easily navigate the website.
+
+**Achieved?**: Yes. The navigation bar includes links to all pages on both desktop and mobile devices, so users are able to find what they need quickly and easily.
+
+**User story 3**: As a new user, I want to browse all available products.
+
+**Achieved?**: Yes. The store includes an 'All Products' section where they can view all available products, which is accessible on all devices. Browsing is made easier with options to sort by various different parameters.
+
+**User story 4**: As a new user, I want to filter products to quickly find what I need.
+
+**Achieved?**: Yes. Users are able to shop by category so they are able to find what they are looking for quickly and easily. 
+
+**User story 5**: As a new user, I want to search for products
+
+**Achieved?**: Yes. Users can search for products on all devices by using the search bar, which returns results quickly based on their input.
+
+**User story 6**: As a new user, I want to contact the company for help or advice
+
+**Achieved?**: Yes. The site includes a contact page where the user can submit an enquiry form to receive a response from the store. Contact details are also included, if they wish to contact the company directly themselves for an even faster response.
+
+**User story 7**: As a new user, I want to purchase products without registering for an account
+
+**Achieved?**: Yes. Users are able to place orders without having to register for an account.
+
+**User story 8**: As a new user, I want to browse product reviews left by other users
+
+**Achieved?**: Yes. Users are able to view product reviews without an account via the product detail page for the product they are interested in.
+
+**User story 9**: As a new user, I want to stay informed on actions I take throughout the website
+
+**Achieved?**: Yes. The user is kept informed as to whether their actions were successful or not via the messages that appear at the top right corner of the screen. Confirmation messages are included for all important actions, including adding items to the bag, placing orders and logging in or out (to name a few).
+
+**User story 10**: As a new user, I want to receive confirmation of my order
+
+**Achieved?**: Yes. Once an order is placed, the user is directed to a confirmation page telling them their order has been successfully placed. They will also receive an email with confirmation of their order.
+
+**User story 11**: As a new user, I want to access the site on any device
+
+**Achieved?**: Yes. The site is fully responsive and can be accessed on any device. In addition to testing the site on multiple devices with different screen sizes, the site was also tested using devtools with the smallest mobile device available in the list, the Galaxy Z Fold 5.
+
+**User story 12**: As a new user, I want to create and log into an account
+
+**Achieved?**: Yes. Users are able to create / login to their account via the 'My Account' button at the top of the screen, available on every page of the website. In addition, there are several prompts to either create and account or login to an existing account throughout the website on specific pages where relevant.
+
+**User story 13**: As a registered user, I want to view my profile page
+
+**Achieved?**: Yes. All registered users are provided with a profile page which can be viewed when they login.
+
+**User story 14**: As a registered user, I want to view my previous order history
+
+**Achieved?**: Yes. The user is able to see their previous order history on their profile page.
+
+**User story 15**: As a registered user, I want to view and update my personal information
+
+**Achieved?**: Yes. The user is able to view and update their personal information on their profile page.
+
+**User story 16**: As a registered user, I want to create reviews for products I've purchased
+
+**Achieved?**: Yes. Once logged in, users are able to create reviews for any product found within the store at the bottom of the product detail page for the product they are viewing.
+
+**User story 17**: As a registered user, I want to view reviews for products I've purchased
+
+**Achieved?**: Yes. Users are able to view reviews submitted by themselves or other users for any product found within the store at the bottom of the product detail page for the product they are viewing.
+
+**User story 18**: As a registered user, I want to update reviews for products I've purchased
+
+**Achieved?**: Yes. Users can update their existing reviews by submitting a new review for the same product as the existing review, which will overwrite / update it.
+
+**User story 19**: As a registered user, I want to delete reviews for products I've purchased
+
+**Achieved?**: Yes. Users can delete their existing reviews by clicking the delete button found within the review of the product they have submitted the review for.
+
+**User story 20**: As a registered user, I want to change my password
+
+**Achieved?**: Yes. Users can update their password via the profile page, or if they have forgotten it they can click the forgotten password link on the login page to reset it.
+
+**User story 21**: As a registered user, I want to make purchases without filling in my personal information each time
+
+**Achieved?**: Yes. Users are given the option to save their personal information in the checkout when completing an order, so it's saved to their profile and will be automatically filled in next time they order. They can also go to their profile and enter / update their information.
+
+**User story 22**: As a registered user, I want to logout of my account
+
+**Achieved?**: Yes. Users can logout of their account by clicking the logout button within the my account section at the top of the page.
+
+**User story 23**: As an admin, I want to add new products to the store
+
+**Achieved?**: Yes. Admin users are able to add new products to the store via the 'Add a product' button within the 'My Account' tab at the top of the page.
+
+**User story 24**: As an admin, I want to update existing products
+
+**Achieved?**: Yes. Admin users are able to update existing products via the 'Edit' button found on the product details page for the product to be edited.
+
+**User story 25**: As an admin, I want to delete existing products
+
+**Achieved?**: Yes. Admin users are able to delete existing products via the 'Delete' button found on the product details page for the product to be deleted.
+
+**User story 26**: As an admin, I want to delete existing reviews
+
+**Achieved?**: Yes. Admin users are able to delete existing reviews that belong to any user via the 'Delete Review' button found within the review itself on the product detail page.
+
+## **Bugs**
+
+I found the following bugs during the development process:
+
+- Toasts
+  - Problem: Toast messages not showing when user takes an action which should display a message.
+  - Cause: Jquery doesn't recognise the toast() function based on the Bootstrap version being used
+  - Solution: Replaced it with vanilla javascript which worked with the Bootstrap version being used
+
+  ---
+
+## **Deployment**
+
+To deploy this Django project, follow the steps below.
+
+### **Prerequisites**
+
+Ensure you have the following:
+
+- Python
+- Git
+- Heroku account
+- Amazon Web Services (AWS) account
+- Stripe account
+- Gmail account for SMTP
+
+### **Installation**
+
+1. Clone the repository from GitHub:
+
+    ```
+    git clone https://github.com/lewis-creates/homenest.git
+    cd in-home
+    ```
+
+2. Set up the virtual environment in terminal:
+
+    ```
+    python -m venv env
+    . env/bin/activate
+    ```
+
+3. Install the project dependencies:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+4. Create an env.py file in the root directory of the project for your environment variables using the example template below:
+
+    ```
+    import os
+
+    os.environ['SECRET_KEY'] = 'your_secret_key'
+    os.environ['DATABASE_URL'] = 'your_database_url'
+    os.environ['AWS_ACCESS_KEY_ID'] = 'your_aws_access_key_id'
+    os.environ['AWS_SECRET_ACCESS_KEY'] = 'your_aws_secret_access_key'
+    os.environ['STRIPE_PUBLIC_KEY'] = 'your_stripe_public_key'
+    os.environ['STRIPE_SECRET_KEY'] = 'your_stripe_secret_key'
+    os.environ['EMAIL_HOST_USER'] = 'your_email'
+    os.environ['EMAIL_HOST_PASSWORD'] = 'your_email_password'
+    ```
+
+5. Ensure env.py and the other following files are included in your .gitignore file to keep them hidden:
+
+    ```
+    *.pyc
+    __pycache__/
+    env.py
+    ```
+
+### **Configuring AWS for Media and Static Files**
+
+- Log in to your AWS account and create an S3 bucket for storing your media and static files.
+- Configure the bucket to allow public access.
+- Update your Django settings to use django-storages and boto3 for managing static and media files.
+- Add the following configurations to your settings.py:
+
+    ```
+    AWS_STORAGE_BUCKET_NAME = 'your_bucket_name'
+    AWS_S3_REGION_NAME = 'your_region'  # e.g., 'us-east-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+    ```
+
+### **Setting Up Stripe**
+
+- Obtain your Stripe API keys from the dashboard.
+- Add these keys to your env.py file.
+
+### **Configuring Gmail for SMTP**
+
+Gmail settings:
+
+  - Go to your Gmail account and click account settings
+  - Click 'Accounts and Import', then 'Other Google Account Settings' and then 'Security'.
+  - Under 'Signing into Google', turn on 2-Step Verification. Follow the steps until this is complete.
+  - Once complete, you should be able to see 'App passwords' on the 'Security' page. Click that.
+  - Select 'Mail' as the app and then 'Django' as the device.
+  - You will then see a 16 character password, keep this on screen as you will need it below.
+
+Configure your settings.py to use Gmail for sending emails:
+
+```
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+```
+
+### **Deploying to Heroku**
+
+1. In your IDE, ensure the requirements are up to date with:
+
+    ```
+    pip3 freeze --local > requirements.txt
+    ```
+
+2. Log in to Heroku via the terminal and crease a new app:
+
+    ```
+    heroku login
+    heroku create your-app-name
+    ```
+
+4. Set your environment variables on Heroku:
+
+    ```
+    heroku config:set SECRET_KEY='your_secret_key'
+    heroku config:set DATABASE_URL='your_database_url'
+    heroku config:set AWS_ACCESS_KEY_ID='your_aws_access_key_id'
+    heroku config:set AWS_SECRET_ACCESS_KEY='your_aws_secret_access_key'
+    heroku config:set STRIPE_PUBLIC_KEY='your_stripe_public_key'
+    heroku config:set STRIPE_SECRET_KEY='your_stripe_secret_key'
+    heroku config:set HOST='your-app-name.herokuapp.com' # the heroku app URL or live domain
+    heroku config:set STRIPE_WH_SECRET=''
+    heroku config:set EMAIL_HOST_USER='your_email'
+    heroku config:set EMAIL_HOST_PASSWORD='your_email_password'
+    heroku config:set USE_AWS='True' # enable media/static to be collected from AWS S3
+    ```
+
+5. Create a Procfile with gunicorn and run migrations:
+
+    ```
+    web: gunicorn base_project.wsgi
+    release: python manage.py migrate
+    ```
+
+6. Push your code to Heroku:
+
+    ```
+    git push heroku main
+    ```
+
+7. Run migrations on Heroku:
+
+    ```
+    heroku run python manage.py migrate
+    ```
+
+8. With deployment successful, create a new superuser:
+
+    ```
+    heroku run python manage.py createsuperuser
+    ```
+
+## **Tech**
+
+Languages used:
+
+- HTML
+- CSS
+- JavaScript
+- Python
+
+Framework used:
+
+- Django
+
+Tools used:
+
+- Bootstrap
+- Fontawesome
+- Google Fonts
+- Stripe
+- Amazon Web Services
+- CI Database
+
+Deployment:
+
+- Heroku
+
+Version Control:
+
+- Git & Github
+
+## **Credits**
+
+The following people, websites and learning materials aided me with the creation of this project.
+
+### **Honourable mentions**
+
+Special thanks to my mentor Richard Wells for his excellent advice and support throughout this project.
+
+### **Content**
+
+The [Django signals documentation](https://docs.djangoproject.com/en/5.0/ref/signals/) really helped me to structure the code for handling updates to product ratings for new review submissions and also deletions.
+
+The [Django custom template tags documenation](https://docs.djangoproject.com/en/5.0/howto/custom-template-tags/) aided me to create the custom template filter used in the products app to check if the name of the category is one of the specified values.
+
+### **Media**
+
+Product images were sourced using the free image sites [Unsplash](https://unsplash.com/), [Free Images](https://www.freeimages.com/) and [Pexels](https://www.pexels.com/).
