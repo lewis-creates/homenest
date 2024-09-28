@@ -55,3 +55,76 @@ HomeNest is an online e-commerce store selling all different types of homeware. 
 24. Update existing products
 25. Delete existing products
 26. Delete existing reviews
+
+### **Site Aims**
+
+- Offer a simple and responsive e-commerce store where users can purchase homeware items quickly and easily.
+- Offer the ability to register an account, allowing the user to see their previous order history, manage personal information and leave reviews for products they have purchased.
+- To keep the user informed as they navigate the store, providing confirmation of successful actions taking and warning them when something hasn't worked the way they would expect.
+- To allow the user the ability to message the store via a contact form if they need help or advice.
+
+### **Wireframes**
+
+The original wireframes for the main pages of the store can be found below. During development, a few decisions were made to change the original structure.
+
+- **Home Page**: The welcome heading and text was moved into the main image underneath the navigation to give this area more substance and make it one of the first things the user can see upon entering the store.
+- **Product Detail Page**: Instead of using Bootstrap cards to display existing review, I opted to use the Bootstrap accordion instead as the cards would be quite big, and also I could incorporate the stores color theme into the accordion in a more aesthetic way than a card. I felt the overall flow of the page was better as a result.
+- **Contact Page**: A few minor label changes for the input fields, plus the addition of the company contact details should the user wish to contact them by phone, email or visit directly. These details are already in the footer, however as one of the essential pieces of information if a user needs help or advice, I felt it was a good idea to include it on the contact page as well.
+
+<br>
+
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home Page Wireframe" src="docs/wireframes/home-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Profile Page</summary>
+<br>
+<img alt="Profile Page Wireframe" src="docs/wireframes/user-profile-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Contact Page</summary>
+<br>
+<img alt="Contact Page Wireframe" src="docs/wireframes/contact-us-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Products Page</summary>
+<br>
+<img alt="Products Page Wireframe" src="docs/wireframes/products-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Product Detail Page</summary>
+<br>
+<img alt="Product Detail Page Wireframe" src="docs/wireframes/product-details-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Shopping Bag</summary>
+<br>
+<img alt="Shopping Bag Wireframe" src="docs/wireframes/shopping-cart-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Checkout Page</summary>
+<br>
+<img alt="Checkout Page Wireframe" src="docs/wireframes/checkout-wf.png">
+</details>
+<br>
+
+<details>
+<summary>Order Confirmation Page</summary>
+<br>
+<img alt="Order Confirmation Page Wireframe" src="docs/wireframes/order-conf-wf.png">
+</details>
+
