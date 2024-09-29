@@ -985,7 +985,7 @@ The following people, websites and learning materials aided me with the creation
 
 ### **Honourable mentions**
 
-Special thanks to my mentor Richard Wells for his excellent advice and support throughout this project.
+Special thanks to the CI tutors who helped and supported me multiple times throughout this project.
 
 ### **Content**
 
