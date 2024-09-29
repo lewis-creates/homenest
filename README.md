@@ -1,8 +1,7 @@
 ## **HomeNest**
 
-[View the deployed project here](PLACEHOLDER FOR PROJECT)
+[View the deployed project here](https://homenest-762c80876e0f.herokuapp.com/)
 
-![Application shown on multiple devices](PROJECT ON DEVICES)
 
 ## **Site Overview**
 
@@ -87,6 +86,12 @@ HomeNest is an online e-commerce store selling all different types of homeware. 
 - Offer the ability to register an account, allowing the user to see their previous order history, manage personal information and leave reviews for products they have purchased.
 - To keep the user informed as they navigate the store, providing confirmation of successful actions taking and warning them when something hasn't worked the way they would expect.
 - To allow the user the ability to message the store via a contact form if they need help or advice.
+
+### **Database Schema**
+
+Many thanks to [Draw SQL](https://drawsql.app/) for assisting me with my database schema. This really helped me to visualise how the tables would be set up and where each table connects.
+
+![Database Schema](docs/schema/dbschemanew2.png)
 
 ### **Wireframes**
 
