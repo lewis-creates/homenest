@@ -10,6 +10,31 @@ HomeNest is an online e-commerce store selling all different types of homeware. 
 
 ## **Table of contents**
 
+- [**In Home**](#in-home)
+- [**Site Overview**](#site-overview)
+- [**Table of contents**](#table-of-contents)
+- [**Planning stage**](#planning-stage)
+  - [**Target Audiences**](#target-audiences)
+  - [**User Stories**](#user-stories)
+  - [**Site Aims**](#site-aims)
+  - [**Database Schema**](#database-schema)
+  - [**Wireframes**](#wireframes)
+  - [**Color Scheme**](#color-scheme)
+- [**Typography**](#typography)
+- [**Features**](#features)
+- [**Future Enhancements**](#future-enhancements)
+- [**Testing Phase**](#testing-phase)
+  - [**Responsiveness**](#responsiveness)
+  - [**Functionality**](#functionality)
+  - [**Validators**](#validators)
+  - [**Testing user stories**](#testing-user-stories)
+- [**Bugs**](#bugs)
+- [**Deployment**](#deployment)
+- [**Tech**](#tech)
+- [**Credits**](#credits)
+  - [**Honourable mentions**](#honourable-mentions)
+  - [**Media**](#media)
+
 ## **Planning stage**
 
 ### **Target Audiences**
