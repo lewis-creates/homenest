@@ -29,12 +29,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-lewiscreates-homenest-ndyla0qohtx.ws.codeinstitute-ide.net',
     'localhost',
-    'homenest-762c80876e0f.herokuapp.com'
+    'homenest-762c80876e0f.herokuapp.com',
+    '8000-lewiscreates-homenest-9je9urbl571.ws.codeinstitute-ide.net',
     ]
 
 
